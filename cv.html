@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elisey Yordanov — CV / Resume. Data Engineer & Software Developer.">
+    <title>CV — Elisey Yordanov</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/ico.png" type="image/png"><!-- fallback -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="cv-page">
+
+<!-- ══════════════════════════════════════
+     NAVIGATION (reused from main)
+══════════════════════════════════════ -->
+<nav class="navbar scrolled" id="navbar">
+    <div class="container">
+        <div class="nav-wrapper">
+            <a href="index.html" class="nav-logo">EY.</a>
+            <div class="nav-right">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-arrow-left"></i>
+                    <span id="nav-back-text">Back to site</span>
+                </a>
+                <div class="nav-controls">
+                    <button class="icon-btn" data-theme-toggle aria-label="Toggle theme">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <div class="lang-btns">
+                        <button class="lang-btn active" data-lang-btn="en">EN</button>
+                        <button class="lang-btn"        data-lang-btn="bg">BG</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Top bar with actions -->
+<div class="cv-topbar">
+    <div class="container">
+        <div class="cv-topbar-inner">
+            <span style="font-size:0.85rem;color:var(--text-muted);">
+                <i class="fas fa-file-alt" style="color:var(--clr-primary);margin-right:0.4rem;"></i>
+                <span id="cv-label">Curriculum Vitae</span>
+            </span>
+            <div class="cv-actions">
+                <a href="cv-onepage.html" style="font-size:0.8rem;color:var(--text-muted);transition:color 0.2s;" id="cv-onepage-link">→ One-page version</a>
+                <button onclick="window.print()" class="cv-print-btn">
+                    <i class="fas fa-print"></i>
+                    <span id="cv-print-btn-text">Print / Save as PDF</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     CV BODY
+══════════════════════════════════════ -->
+<main class="cv-body">
+
+    <!-- Header Card -->
+    <div class="cv-header-card" data-aos="fade-up">
+        <img src="images/me.png" alt="Elisey Yordanov" class="cv-avatar">
+        <div>
+            <h1 id="cv-name" class="cv-name">Elisey Yordanov</h1>
+            <p id="cv-job-title" class="cv-job-title">Data Engineer &amp; Software Developer</p>
+            <div class="cv-meta">
+                <span class="cv-meta-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span id="cv-location">Ruse, Bulgaria</span>
+                </span>
+                <span class="cv-meta-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:elisei.elisei4@gmail.com">elisei.elisei4@gmail.com</a>
+                </span>
+                <span class="cv-meta-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/elisey-yordanov-19625a1a0" target="_blank" rel="noopener">
+                        linkedin.com/in/elisey-yordanov
+                    </a>
+                </span>
+                <span class="cv-meta-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+359888575501">+359 888 575 501</a>
+                </span>
+                <span class="cv-meta-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/e-yordanov" target="_blank" rel="noopener">
+                        github.com/e-yordanov
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Professional Summary -->
+    <section class="cv-section" data-aos="fade-up">
+        <h2 class="cv-section-title">
+            <i class="fas fa-user"></i>
+            <span id="cv-summary-title">Professional Summary</span>
+        </h2>
+        <p id="cv-summary" style="font-size:0.92rem;color:var(--text-secondary);line-height:1.8;">
+            Data Engineer and Software Developer with 5+ years of experience building data pipelines,
+            AI/ML systems, cloud infrastructure, and security solutions. Started career at 17 at Econt
+            Express (Bulgaria's largest courier company), progressing from data engineering through
+            information security. Currently at IT Partner Ltd delivering complex data and AI projects
+            at enterprise scale. Holder of 3 Google Cloud Professional certifications.
+        </p>
+    </section>
+
+    <!-- Work Experience -->
+    <section class="cv-section" data-aos="fade-up">
+        <h2 class="cv-section-title">
+            <i class="fas fa-briefcase"></i>
+            <span id="cv-exp-title">Work Experience</span>
+        </h2>
+
+        <!-- IT Partner -->
+        <div class="cv-exp-item">
+            <div class="cv-exp-header">
+                <div>
+                    <div class="cv-exp-title" id="cv-exp1-title">Software Developer</div>
+                    <div class="cv-exp-company">IT Partner Ltd &nbsp;·&nbsp; Shumen / Remote, Bulgaria</div>
+                </div>
+                <span class="cv-exp-period" id="cv-exp1-period">Feb 2023 – Present</span>
+            </div>
+            <p class="cv-exp-desc" id="cv-exp1-desc">
+                The technology company that built and maintains the entire Econt IT ecosystem.
+                Leading and contributing to high-priority data engineering, AI/ML, and infrastructure projects.
+            </p>
+            <ul class="cv-exp-bullets" id="cv-exp1-bullets">
+                <li>Designed and built a petabyte-scale Real-Time DWH on BigQuery with Change Data Capture (CDC) streaming all operational databases in real-time</li>
+                <li>VisionAI — complete end-to-end Computer Vision platform: in-house YOLOv8 model training, PTZ camera automation, hybrid LPR, Deepstream on NVIDIA GPUs</li>
+                <li>Talk2SQL — AI chatbot converting natural language to BigQuery SQL over the entire enterprise DWH in real-time</li>
+                <li>Capacity Analytics Suite: three interconnected systems monitoring transport, courier, and office load across Econt's logistics network</li>
+                <li>AI business integrations: automated invoice analysis, logistics profitability calculation, AI agents for business operations</li>
+                <li>Led IT team migration from Econt to IT Partner; authored internal engineering standards and documentation</li>
+                <li>PHP ETL framework migration and CDC pipeline architecture</li>
+            </ul>
+            <div class="timeline-tags" style="margin-top:0.5rem;">
+                <span class="tag">BigQuery</span><span class="tag">Python</span><span class="tag">GCP</span>
+                <span class="tag">YOLOv8</span><span class="tag">Deepstream</span><span class="tag">CDC</span>
+                <span class="tag">Kubernetes</span><span class="tag">AI/ML</span><span class="tag">PHP</span>
+                <span class="tag">Vertex AI</span><span class="tag">Cloud Run</span>
+            </div>
+        </div>
+
+        <!-- Econt InfoSec -->
+        <div class="cv-exp-item">
+            <div class="cv-exp-header">
+                <div>
+                    <div class="cv-exp-title" id="cv-exp2-title">Information Security Specialist</div>
+                    <div class="cv-exp-company">Econt Express &nbsp;·&nbsp; Ruse, Bulgaria</div>
+                </div>
+                <span class="cv-exp-period" id="cv-exp2-period">Jul 2022 – Feb 2023</span>
+            </div>
+            <p class="cv-exp-desc" id="cv-exp2-desc">
+                Promoted to Information Security. Monitored threats, conducted penetration tests, and designed protective systems for Bulgaria's largest courier company.
+            </p>
+            <ul class="cv-exp-bullets" id="cv-exp2-bullets">
+                <li>Business-side requester and co-designer of the Network Management Center (NMC) — defined architecture & requirements for DDoS mitigation and internet connectivity management across all data centers</li>
+                <li>Co-designed the email security system architecture and defined requirements (DKIM, SPF, PTR, blacklists/whitelists, anti-phishing logic)</li>
+                <li>Conducted internal penetration tests and proactively reported vulnerabilities to IT Partner for remediation</li>
+                <li>Monitored security breaches via SIEM and Splunk; authored post-incident security reports</li>
+                <li>Continued Product Ownership of AppDynamics APM and F5 WAF</li>
+            </ul>
+            <div class="timeline-tags" style="margin-top:0.5rem;">
+                <span class="tag">F5 WAF</span><span class="tag">AppDynamics</span><span class="tag">Splunk</span>
+                <span class="tag">SIEM</span><span class="tag">Penetration Testing</span><span class="tag">DDoS</span>
+                <span class="tag">DKIM/SPF/DMARC</span>
+            </div>
+        </div>
+
+        <!-- Econt BCP -->
+        <div class="cv-exp-item">
+            <div class="cv-exp-header">
+                <div>
+                    <div class="cv-exp-title" id="cv-exp3-title">Business Continuity Specialist</div>
+                    <div class="cv-exp-company">Econt Express &nbsp;·&nbsp; Ruse, Bulgaria</div>
+                </div>
+                <span class="cv-exp-period" id="cv-exp3-period">Jan 2022 – Jul 2022</span>
+            </div>
+            <p class="cv-exp-desc" id="cv-exp3-desc">
+                Key technical expert in the Business Continuity team; Product Owner of two enterprise monitoring products.
+            </p>
+            <ul class="cv-exp-bullets" id="cv-exp3-bullets">
+                <li>Product Owner of AppDynamics (APM) and F5 WAF — managed requirements, vendor relations, and internal rollouts</li>
+                <li>Led system failure root-cause analysis using AppDynamics during high-severity incidents</li>
+                <li>Provided emergency technical support to the IT team during critical situations</li>
+            </ul>
+            <div class="timeline-tags" style="margin-top:0.5rem;">
+                <span class="tag">AppDynamics</span><span class="tag">F5 WAF</span>
+                <span class="tag">Incident Management</span><span class="tag">SQL Reporting</span>
+            </div>
+        </div>
+
+        <!-- Econt Data -->
+        <div class="cv-exp-item">
+            <div class="cv-exp-header">
+                <div>
+                    <div class="cv-exp-title" id="cv-exp4-title">Junior Data Engineer</div>
+                    <div class="cv-exp-company">Econt Express &nbsp;·&nbsp; Ruse, Bulgaria</div>
+                </div>
+                <span class="cv-exp-period" id="cv-exp4-period">Jul 2020 – Jan 2022</span>
+            </div>
+            <p class="cv-exp-desc" id="cv-exp4-desc">
+                Started as IT intern at 17 years old. Rapidly developed into a full Data Engineer delivering critical reports and ETL systems.
+            </p>
+            <ul class="cv-exp-bullets" id="cv-exp4-bullets">
+                <li>Built ETL pipelines extracting and transforming data from Core and secondary systems into the Data Warehouse</li>
+                <li>Created management dashboards and automated reports using SSRS, PowerBI, and custom SQL</li>
+                <li>Administered all Econt cloud environments (all major cloud providers) and the GitHub organization</li>
+                <li>Participated in the initial F5 WAF and AppDynamics projects from day one as a junior contributor</li>
+            </ul>
+            <div class="timeline-tags" style="margin-top:0.5rem;">
+                <span class="tag">MySQL</span><span class="tag">MSSQL</span><span class="tag">SSIS</span>
+                <span class="tag">SSRS</span><span class="tag">PowerBI</span><span class="tag">Cloud Admin</span>
+                <span class="tag">GitHub</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section class="cv-section" data-aos="fade-up">
+        <h2 class="cv-section-title">
+            <i class="fas fa-graduation-cap"></i>
+            <span id="cv-edu-title">Education</span>
+        </h2>
+
+        <div class="cv-exp-item">
+            <div class="cv-exp-header">
+                <div>
+                    <div class="cv-exp-title" id="cv-edu1-title">IT Career — National Program</div>
+                    <div class="cv-exp-company" id="cv-edu1-major">Backend Developer Pathway</div>
+                </div>
+                <span class="cv-exp-period">2020 – 2022</span>
+            </div>
+            <p class="cv-exp-desc" id="cv-edu1-note">
+                Diploma with Honors — 5.50/6.00 · Awarded by the Minister of Education as top graduate of the cohort
+            </p>
+        </div>
+
+        <div class="cv-exp-item">
+            <div class="cv-exp-header">
+                <div>
+                    <div class="cv-exp-title" id="cv-edu2-title">SU Hristo Botev, Ruse</div>
+                    <div class="cv-exp-company" id="cv-edu2-major">Technical Track — Information Technology</div>
+                </div>
+                <span class="cv-exp-period">2016 – 2021</span>
+            </div>
+            <p class="cv-exp-desc" id="cv-edu2-note">
+                John Atanasov Award — best technical student at graduation · GPA ~5.30/6.00
+            </p>
+        </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="cv-section" data-aos="fade-up">
+        <h2 class="cv-section-title">
+            <i class="fas fa-code"></i>
+            <span id="cv-skills-title">Technical Skills</span>
+        </h2>
+        <div class="cv-skills-grid">
+            <div>
+                <div class="cv-skill-group-name"><i class="fas fa-database"></i> Data Engineering</div>
+                <div class="cv-skill-pills">
+                    <span class="cv-skill-pill">BigQuery</span>
+                    <span class="cv-skill-pill">MySQL</span>
+                    <span class="cv-skill-pill">MSSQL</span>
+                    <span class="cv-skill-pill">PostgreSQL</span>
+                    <span class="cv-skill-pill">Cloud SQL</span>
+                    <span class="cv-skill-pill">SSIS</span>
+                    <span class="cv-skill-pill">SSRS / SSAS</span>
+                    <span class="cv-skill-pill">ETL / CDC</span>
+                    <span class="cv-skill-pill">PowerBI</span>
+                    <span class="cv-skill-pill">Looker</span>
+                    <span class="cv-skill-pill">Data Warehousing</span>
+                </div>
+            </div>
+            <div>
+                <div class="cv-skill-group-name"><i class="fas fa-cloud"></i> Cloud &amp; Infrastructure</div>
+                <div class="cv-skill-pills">
+                    <span class="cv-skill-pill">Google Cloud Platform</span>
+                    <span class="cv-skill-pill">Cloud Build</span>
+                    <span class="cv-skill-pill">Cloud Run</span>
+                    <span class="cv-skill-pill">Kubernetes</span>
+                    <span class="cv-skill-pill">VMware</span>
+                    <span class="cv-skill-pill">Docker</span>
+                    <span class="cv-skill-pill">CI/CD</span>
+                    <span class="cv-skill-pill">Terraform</span>
+                </div>
+            </div>
+            <div>
+                <div class="cv-skill-group-name"><i class="fas fa-brain"></i> AI / Machine Learning</div>
+                <div class="cv-skill-pills">
+                    <span class="cv-skill-pill">YOLOv8</span>
+                    <span class="cv-skill-pill">Deepstream</span>
+                    <span class="cv-skill-pill">NVIDIA GPU</span>
+                    <span class="cv-skill-pill">Vertex AI</span>
+                    <span class="cv-skill-pill">LLM / NLP</span>
+                    <span class="cv-skill-pill">Computer Vision</span>
+                    <span class="cv-skill-pill">Generative AI</span>
+                    <span class="cv-skill-pill">RAG</span>
+                </div>
+            </div>
+            <div>
+                <div class="cv-skill-group-name"><i class="fas fa-code"></i> Programming</div>
+                <div class="cv-skill-pills">
+                    <span class="cv-skill-pill">Python</span>
+                    <span class="cv-skill-pill">PHP</span>
+                    <span class="cv-skill-pill">JavaScript</span>
+                    <span class="cv-skill-pill">C#</span>
+                    <span class="cv-skill-pill">Java</span>
+                    <span class="cv-skill-pill">HTML / CSS</span>
+                    <span class="cv-skill-pill">SQL</span>
+                    <span class="cv-skill-pill">Bash</span>
+                </div>
+            </div>
+            <div>
+                <div class="cv-skill-group-name"><i class="fas fa-shield-alt"></i> Security &amp; Monitoring</div>
+                <div class="cv-skill-pills">
+                    <span class="cv-skill-pill">F5 WAF</span>
+                    <span class="cv-skill-pill">AppDynamics</span>
+                    <span class="cv-skill-pill">Splunk</span>
+                    <span class="cv-skill-pill">SIEM</span>
+                    <span class="cv-skill-pill">Penetration Testing</span>
+                    <span class="cv-skill-pill">DKIM/SPF/DMARC</span>
+                    <span class="cv-skill-pill">DDoS Mitigation</span>
+                </div>
+            </div>
+            <div>
+                <div class="cv-skill-group-name"><i class="fas fa-tools"></i> DevOps &amp; Tools</div>
+                <div class="cv-skill-pills">
+                    <span class="cv-skill-pill">Git / GitHub</span>
+                    <span class="cv-skill-pill">CI/CD Pipelines</span>
+                    <span class="cv-skill-pill">Linux</span>
+                    <span class="cv-skill-pill">Windows Server</span>
+                    <span class="cv-skill-pill">NGINX</span>
+                    <span class="cv-skill-pill">Firewall Mgmt</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Public Presence -->
+    <section class="cv-section" data-aos="fade-up">
+        <h2 class="cv-section-title">
+            <i class="fas fa-microphone"></i>
+            <span id="cv-presence-title">Public Presence</span>
+        </h2>
+        <div id="cv-presence-list"></div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="cv-section" data-aos="fade-up">
+        <h2 class="cv-section-title">
+            <i class="fas fa-certificate"></i>
+            <span id="cv-certs-title">Certifications</span>
+        </h2>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.6rem;flex-wrap:wrap;gap:0.5rem;">
+            <span style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--clr-primary);opacity:0.8;">Professional Certifications</span>
+            <a href="https://www.credly.com/users/elisey-yordanov/badges#credly" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--clr-primary);display:flex;align-items:center;gap:0.3rem;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                <i class="fas fa-external-link-alt" style="font-size:0.65rem;"></i> View all on Credly
+            </a>
+        </div>
+        <div class="cv-certs-grid" style="margin-bottom:1rem;">
+            <div class="cv-cert-item">
+                <i class="fas fa-award"></i>
+                <a href="https://www.credly.com/badges/b7700dd5-9a0b-45b9-b768-ff3de6742d8f/public_url" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Google Cloud — Professional Data Engineer ↗</a>
+            </div>
+            <div class="cv-cert-item">
+                <i class="fas fa-award"></i>
+                <a href="https://www.credly.com/badges/0f6e8fbd-c744-4722-aec7-1845e0884a45/public_url" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Google Cloud — Professional Machine Learning Engineer ↗</a>
+            </div>
+            <div class="cv-cert-item">
+                <i class="fas fa-award"></i>
+                <a href="https://www.credly.com/badges/a2590a10-3a72-4b32-a5f7-131abd3aa8bc/public_url" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Google Cloud — Professional Cloud Developer ↗</a>
+            </div>
+        </div>
+        <div style="margin-bottom:0.6rem;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--clr-cyan);opacity:0.8;">Skill Badges</div>
+        <div class="cv-certs-grid">
+            <div class="cv-cert-item">
+                <i class="fas fa-star" style="color:var(--clr-cyan);"></i>
+                <a href="https://www.credly.com/badges/8572a53e-c75d-4762-987f-10e1146c54e0/public_url" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Google Cloud — Build &amp; Deploy Generative AI Solutions ↗</a>
+            </div>
+            <div class="cv-cert-item">
+                <i class="fas fa-star" style="color:var(--clr-cyan);"></i>
+                <a href="https://www.credly.com/badges/239ba763-40c4-4713-9a35-e1727d964757/public_url" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Google Cloud — Enterprise Search &amp; Conversation AI ↗</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Back to Top -->
+<button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    if (window.AOS) AOS.init({ duration: 600, once: true, offset: 40 });
+</script>
+
+<!-- Translations (for theme / lang toggle) -->
+<script src="translations.js"></script>
+
+<script>
+'use strict';
+
+// ── Theme Manager (same as main site) ──
+const _theme = localStorage.getItem('ey-theme') ||
+               (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+document.documentElement.setAttribute('data-theme', _theme);
+
+document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
+    const icon = btn.querySelector('i');
+    if (icon) icon.className = _theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    btn.addEventListener('click', () => {
+        const cur = document.documentElement.getAttribute('data-theme');
+        const next = cur === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('ey-theme', next);
+        btn.querySelector('i').className = next === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    });
+});
+
+// ── Language for CV page ──
+const CV_CONTENT = {
+    en: {
+        back: "← Back to site",
+        label: "Curriculum Vitae",
+        printBtn: "Print / Save as PDF",
+        summaryTitle: "Professional Summary",
+        summary: "Data Engineer and Software Developer with 5+ years of experience building data pipelines, AI/ML systems, cloud infrastructure, and security solutions. Started career at 17 at Econt Express (Bulgaria's largest courier company), progressing from data engineering through information security. Currently at IT Partner Ltd delivering complex data and AI projects at enterprise scale. Holder of 3 Google Cloud Professional certifications.",
+        expTitle: "Work Experience",
+        eduTitle: "Education",
+        skillsTitle: "Technical Skills",
+        certsTitle: "Certifications",
+        exp1Title: "Software Developer",
+        exp1Period: "Feb 2023 – Present",
+        exp1Desc: "The technology company that built and maintains the entire Econt IT ecosystem. Leading and contributing to high-priority data engineering, AI/ML, and infrastructure projects.",
+        exp2Title: "Information Security Specialist",
+        exp2Period: "Jul 2022 – Feb 2023",
+        exp2Desc: "Promoted to Information Security. Monitored security breaches, conducted internal penetration tests, and co-designed protective systems for Bulgaria's largest courier company.",
+        exp3Title: "Business Continuity Specialist",
+        exp3Period: "Jan 2022 – Jul 2022",
+        exp3Desc: "Key technical expert in the Business Continuity team; Product Owner of two enterprise monitoring products. Also provided emergency technical support to the IT team.",
+        exp4Title: "Junior Data Engineer",
+        exp4Period: "Jul 2020 – Jan 2022",
+        exp4Desc: "Started as IT intern at 17 years old. Rapidly developed into a full Data Engineer delivering critical reports and ETL systems.",
+        edu1Title: "IT Career — National Program",
+        edu1Major: "Backend Developer Pathway · SoftUni-based curriculum",
+        edu1Note: "Diploma with Honors — 5.50/6.00 · Awarded by the Minister of Education as top graduate of the cohort",
+        edu2Title: "SU Hristo Botev, Ruse",
+        edu2Major: "Technical Track — Information Technology",
+        edu2Note: "John Atanasov Award — best technical student at graduation · GPA ~5.30/6.00",
+        jobTitle: "Data Engineer & Software Developer",
+        location: "Ruse, Bulgaria"
+    },
+    bg: {
+        back: "← Обратно към сайта",
+        label: "Автобиография",
+        printBtn: "Принтирай / Запази като PDF",
+        summaryTitle: "Профил",
+        summary: "Data Engineer и Разработчик с 5+ години опит в изграждане на data pipelines, AI/ML системи, облачна инфраструктура и решения за сигурност. Започнах кариерата си на 17 години в Еконт Експрес (най-голямата куриерска компания в България), преминавайки от data engineering до информационна сигурност. В момента в Ай Ти Партньор ЕООД, реализирайки сложни data и AI проекти в корпоративен мащаб. Притежавам 3 Google Cloud Professional сертификата.",
+        expTitle: "Трудов стаж",
+        eduTitle: "Образование",
+        skillsTitle: "Технически умения",
+        certsTitle: "Сертификати",
+        exp1Title: "Разработчик на Софтуер",
+        exp1Period: "Февр. 2023 – Настояще",
+        exp1Desc: "Технологичната компания изградила и поддържаща цялата ИТ екосистема на Еконт. Ръководя и участвам в приоритетни data engineering, AI/ML и инфраструктурни проекти.",
+        exp2Title: "Специалист Информационна Сигурност",
+        exp2Period: "Юли 2022 – Февр. 2023",
+        exp2Desc: "Повишен в Информационна сигурност. Следях пробиви, провеждах penetration тестове и участвах като съавтор в проектирането на защитни системи за най-голямата куриерска фирма в България.",
+        exp3Title: "Специалист Непрекъснатост на Бизнеса",
+        exp3Period: "Ян. 2022 – Юли 2022",
+        exp3Desc: "Ключов технически експерт в екипа за непрекъснатост; Продуктов собственик на два корпоративни продукта за мониторинг. Предоставях и спешна техническа поддръжка на ИТ екипа.",
+        exp4Title: "Junior Data Engineer",
+        exp4Period: "Юли 2020 – Ян. 2022",
+        exp4Desc: "Започнах като ИТ стажант на 17 години. Бързо се развих в пълноценен Data Engineer, доставяйки критични репорти и ETL системи.",
+        edu1Title: "ИТ Кариера — Национална програма",
+        edu1Major: "Пътека Backend разработчик · Учебна програма базирана на SoftUni",
+        edu1Note: "Диплома с отличен — 5.50/6.00 · Награден от министъра на образованието като отличник на випуска",
+        edu2Title: "СУ Христо Ботев, Русе",
+        edu2Major: "Технически профил — Информационни технологии",
+        edu2Note: "Награда Джон Атанасов — най-добър технически ученик · Успех ~5.30/6.00",
+        jobTitle: "Data Engineer и Разработчик",
+        location: "Русе, България"
+    }
+};
+
+function applyCVLang(lang) {
+    const c = CV_CONTENT[lang] || CV_CONTENT.en;
+    document.querySelectorAll('[data-lang-btn]').forEach(b => {
+        b.classList.toggle('active', b.getAttribute('data-lang-btn') === lang);
+    });
+    document.getElementById('nav-back-text').textContent       = c.back;
+    document.getElementById('cv-label').textContent            = c.label;
+    document.getElementById('cv-print-btn-text').textContent   = c.printBtn;
+    const ol = document.getElementById('cv-onepage-link');
+    if (ol) ol.textContent = lang === 'bg' ? '→ Версия на една страница' : '→ One-page version';
+    document.getElementById('cv-summary-title').textContent    = c.summaryTitle;
+    document.getElementById('cv-summary').textContent          = c.summary;
+    document.getElementById('cv-exp-title').textContent        = c.expTitle;
+    document.getElementById('cv-edu-title').textContent        = c.eduTitle;
+    document.getElementById('cv-skills-title').textContent     = c.skillsTitle;
+    document.getElementById('cv-certs-title').textContent      = c.certsTitle;
+    document.getElementById('cv-job-title').textContent        = c.jobTitle;
+    document.getElementById('cv-location').textContent         = c.location;
+
+    document.getElementById('cv-exp1-title').textContent  = c.exp1Title;
+    document.getElementById('cv-exp1-period').textContent = c.exp1Period;
+    document.getElementById('cv-exp1-desc').textContent   = c.exp1Desc;
+    document.getElementById('cv-exp2-title').textContent  = c.exp2Title;
+    document.getElementById('cv-exp2-period').textContent = c.exp2Period;
+    document.getElementById('cv-exp2-desc').textContent   = c.exp2Desc;
+    document.getElementById('cv-exp3-title').textContent  = c.exp3Title;
+    document.getElementById('cv-exp3-period').textContent = c.exp3Period;
+    document.getElementById('cv-exp3-desc').textContent   = c.exp3Desc;
+    document.getElementById('cv-exp4-title').textContent  = c.exp4Title;
+    document.getElementById('cv-exp4-period').textContent = c.exp4Period;
+    document.getElementById('cv-exp4-desc').textContent   = c.exp4Desc;
+
+    document.getElementById('cv-edu1-title').textContent  = c.edu1Title;
+    document.getElementById('cv-edu1-major').textContent  = c.edu1Major;
+    document.getElementById('cv-edu1-note').textContent   = c.edu1Note;
+    document.getElementById('cv-edu2-title').textContent  = c.edu2Title;
+    document.getElementById('cv-edu2-major').textContent  = c.edu2Major;
+    document.getElementById('cv-edu2-note').textContent   = c.edu2Note;
+
+    // Public Presence
+    const presTitle = document.getElementById('cv-presence-title');
+    if (presTitle) presTitle.textContent = lang === 'bg' ? 'Публична активност' : 'Public Presence';
+    const presList = document.getElementById('cv-presence-list');
+    if (presList && typeof TALKS !== 'undefined') {
+        const labels = lang === 'bg'
+            ? { watch: 'Гледай', slides: 'Слайдове', lightning: 'Lightning' }
+            : { watch: 'Watch', slides: 'Slides', lightning: 'Lightning' };
+        presList.innerHTML = TALKS.map(ev => `
+            <div class="cv-exp-item">
+                <div class="cv-exp-header">
+                    <div>
+                        <div class="cv-exp-title">
+                            ${ev.conferenceUrl
+                                ? `<a href="${ev.conferenceUrl}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${ev.conference} ↗</a>`
+                                : ev.conference}
+                        </div>
+                        <div class="cv-exp-company">${ev.organizer}</div>
+                    </div>
+                    <span class="cv-exp-period">${ev.year}</span>
+                </div>
+                ${ev.talk ? `<div class="cv-exp-desc" style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.5rem;"><i class="fas fa-microphone" style="color:var(--clr-primary);font-size:0.75rem;"></i> <strong>${ev.talk}</strong></div>` : ''}
+                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.3rem;">
+                    ${ev.talkUrl ? `<a href="${ev.talkUrl}" target="_blank" rel="noopener" style="font-size:0.72rem;color:#dc2626;border:1px solid rgba(220,38,38,0.2);padding:0.15rem 0.5rem;border-radius:999px;text-decoration:none;display:inline-flex;align-items:center;gap:0.3rem;"><i class="fab fa-youtube"></i> ${labels.watch}</a>` : ''}
+                    ${ev.lightningTalkUrl ? `<a href="${ev.lightningTalkUrl}" target="_blank" rel="noopener" style="font-size:0.72rem;color:#d97706;border:1px solid rgba(217,119,6,0.2);padding:0.15rem 0.5rem;border-radius:999px;text-decoration:none;display:inline-flex;align-items:center;gap:0.3rem;"><i class="fas fa-bolt"></i> ${labels.lightning}</a>` : ''}
+                    ${ev.presentationUrl ? `<a href="${ev.presentationUrl}" target="_blank" rel="noopener" style="font-size:0.72rem;color:var(--clr-primary);border:1px solid rgba(139,92,246,0.2);padding:0.15rem 0.5rem;border-radius:999px;text-decoration:none;display:inline-flex;align-items:center;gap:0.3rem;"><i class="fas fa-desktop"></i> ${labels.slides}</a>` : ''}
+                </div>
+            </div>
+        `).join('');
+    }
+}
+
+// Init language
+const _lang = localStorage.getItem('ey-lang') || 'en';
+applyCVLang(_lang);
+
+document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const l = btn.getAttribute('data-lang-btn');
+        localStorage.setItem('ey-lang', l);
+        applyCVLang(l);
+    });
+});
+
+// Back to top
+const btt = document.getElementById('back-to-top');
+if (btt) {
+    window.addEventListener('scroll', () => {
+        btt.classList.toggle('visible', window.scrollY > 300);
+    });
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
+</script>
+
+</body>
+</html>

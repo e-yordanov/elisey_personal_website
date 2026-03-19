@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elisey Yordanov — CV. Data Engineer &amp; Software Developer.">
+    <title>CV — Elisey Yordanov</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/ico.png" type="image/png"><!-- fallback -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Base Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* ── One-page CV specific overrides ── */
+        .op-topbar {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            padding: 0.6rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 200;
+        }
+        .op-topbar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .op-topbar-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .op-back {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            transition: color 0.2s;
+        }
+        .op-back:hover { color: var(--clr-primary); }
+        .op-title {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .op-topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .op-print-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.45rem 1rem;
+            background: linear-gradient(135deg, #7c3aed, #6366f1);
+            color: #fff;
+            border: none;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 2px 12px rgba(139,92,246,0.35);
+        }
+        .op-print-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 20px rgba(139,92,246,0.55);
+        }
+        .op-alt-link {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            transition: color 0.2s;
+        }
+        .op-alt-link:hover { color: var(--clr-primary); }
+
+        /* ── Page wrapper ── */
+        .op-page {
+            max-width: 960px;
+            margin: 1.5rem auto;
+            padding: 0 1rem 3rem;
+        }
+
+        /* ── Main layout: left sidebar + right main ── */
+        .op-sheet {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            min-height: 900px;
+        }
+
+        /* ── LEFT SIDEBAR ── */
+        .op-sidebar {
+            background: linear-gradient(160deg, #1a1035 0%, #0f0a22 100%);
+            padding: 2rem 1.4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+            border-right: 1px solid rgba(139,92,246,0.18);
+        }
+        [data-theme="light"] .op-sidebar {
+            background: linear-gradient(160deg, #f5f3ff 0%, #ede9fe 100%);
+            border-right-color: rgba(139,92,246,0.15);
+        }
+
+        /* Photo + name block */
+        .op-profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 0.75rem;
+        }
+        .op-photo {
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 25%;
+            border: 3px solid var(--clr-primary);
+            box-shadow: 0 0 20px rgba(139,92,246,0.45);
+        }
+        .op-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 800;
+            /* Default (dark theme) — light pastels on dark sidebar */
+            background: linear-gradient(135deg, #c4b5fd, #f0abfc, #a5f3fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+        /* Light theme — darker gradient visible on light sidebar */
+        [data-theme="light"] .op-name {
+            background: linear-gradient(135deg, #6d28d9, #7c3aed, #0e7490);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .op-jobtitle {
+            font-size: 0.72rem;
+            color: var(--clr-primary-light);
+            font-weight: 600;
+            letter-spacing: 0.04em;
+        }
+
+        /* Sidebar section heading */
+        .op-s-heading {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--clr-primary);
+            margin-bottom: 0.6rem;
+            padding-bottom: 0.35rem;
+            border-bottom: 1.5px solid rgba(139,92,246,0.25);
+        }
+
+        /* Contact */
+        .op-contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.45rem;
+        }
+        .op-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.45rem;
+            font-size: 0.72rem;
+            color: var(--text-secondary);
+            word-break: break-all;
+        }
+        .op-contact-item i {
+            color: var(--clr-primary);
+            font-size: 0.7rem;
+            margin-top: 0.1rem;
+            flex-shrink: 0;
+            width: 12px;
+            text-align: center;
+        }
+        .op-contact-item a {
+            color: var(--text-secondary);
+            transition: color 0.2s;
+        }
+        .op-contact-item a:hover { color: var(--clr-primary); }
+
+        /* Skills in sidebar */
+        .op-skill-group { margin-bottom: 0.9rem; }
+        .op-skill-group:last-child { margin-bottom: 0; }
+        .op-skill-group-name {
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            margin-bottom: 0.35rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .op-skill-group-name i { color: var(--clr-primary); font-size: 0.62rem; }
+        .op-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+        }
+        .op-pill {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.6rem;
+            padding: 0.15rem 0.45rem;
+            border-radius: 999px;
+            background: rgba(139,92,246,0.1);
+            color: var(--text-muted);
+            border: 1px solid rgba(139,92,246,0.2);
+        }
+
+        /* Certs in sidebar */
+        .op-cert-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+        .op-cert-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.4rem;
+            font-size: 0.68rem;
+            color: var(--text-secondary);
+            line-height: 1.35;
+        }
+        .op-cert-item i { color: var(--clr-amber); font-size: 0.65rem; margin-top: 0.1rem; flex-shrink: 0; }
+        .op-cert-item.badge-type i { color: var(--clr-cyan); }
+        .op-cert-item a { color: var(--text-secondary); transition: color 0.15s; }
+        .op-cert-item a:hover { color: var(--clr-primary); }
+
+        /* Awards in sidebar */
+        .op-award-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.45rem;
+        }
+        .op-award-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.4rem;
+            font-size: 0.68rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+        .op-award-item i { color: var(--clr-amber); font-size: 0.65rem; margin-top: 0.12rem; flex-shrink: 0; }
+
+        /* ── RIGHT MAIN ── */
+        .op-main {
+            padding: 2rem 1.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+        }
+
+        /* Main section */
+        .op-m-section {}
+        .op-m-heading {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--clr-primary);
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid rgba(139,92,246,0.2);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        /* Summary */
+        .op-summary {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Experience item */
+        .op-exp-item {
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .op-exp-item:last-child {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+        .op-exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.1rem;
+            flex-wrap: wrap;
+        }
+        .op-exp-title {
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--text);
+        }
+        .op-exp-period {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--clr-primary);
+            font-weight: 600;
+            background: rgba(139,92,246,0.08);
+            padding: 0.15rem 0.5rem;
+            border-radius: 999px;
+            flex-shrink: 0;
+        }
+        .op-exp-company {
+            font-size: 0.75rem;
+            color: var(--clr-primary);
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+        .op-exp-bullets {
+            padding-left: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+        .op-exp-bullets li {
+            font-size: 0.73rem;
+            color: var(--text-secondary);
+            list-style-type: disc;
+            line-height: 1.5;
+        }
+        .op-exp-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+            margin-top: 0.4rem;
+        }
+        .op-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.6rem;
+            padding: 0.1rem 0.4rem;
+            border-radius: 999px;
+            background: rgba(139,92,246,0.07);
+            color: var(--text-muted);
+            border: 1px solid rgba(139,92,246,0.12);
+        }
+
+        /* Education */
+        .op-edu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+        .op-edu-item {
+            background: rgba(139,92,246,0.04);
+            border: 1px solid rgba(139,92,246,0.12);
+            border-radius: 8px;
+            padding: 0.7rem 0.85rem;
+        }
+        .op-edu-period {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.62rem;
+            color: var(--clr-primary);
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+        .op-edu-degree {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text);
+            line-height: 1.3;
+            margin-bottom: 0.15rem;
+        }
+        .op-edu-major {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.2rem;
+        }
+        .op-edu-note {
+            font-size: 0.65rem;
+            color: var(--clr-primary-light);
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        /* ══════════════════════════════════════
+           PRINT / Save as PDF
+           • @page { margin: 0 } → removes Chrome URL/date/page-number headers
+           • No .op-page padding → sidebar purple bleeds to paper edge
+           • CSS variable overrides → forces light theme regardless of current theme
+        ══════════════════════════════════════ */
+        @media print {
+            .op-topbar, .back-to-top { display: none !important; }
+
+            @page {
+                size: A4 portrait;
+                margin: 0;
+            }
+
+            /* ── Force light theme variables so dark mode doesn't bleed through ── */
+            :root, [data-theme="dark"] {
+                --bg:              #ffffff !important;
+                --bg-secondary:    #f5f3ff !important;
+                --bg-card:         #ffffff !important;
+                --bg-nav:          #ffffff !important;
+                --text:            #111827 !important;
+                --text-secondary:  #374151 !important;
+                --text-muted:      #6b7280 !important;
+                --border:          #e9e5ff !important;
+                --border-hover:    #c4b5fd !important;
+                --shadow-sm:       none !important;
+                --shadow-md:       none !important;
+                --shadow-lg:       none !important;
+            }
+
+            html, body {
+                background: white !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            /* Edge-to-edge: sidebar purple/main white go to paper border */
+            .op-page {
+                margin: 0 !important;
+                padding: 0 !important;
+                max-width: 100% !important;
+            }
+
+            /* ── Force exactly 1 A4 page, content fills to bottom ── */
+            .op-sheet {
+                border: none !important;
+                border-radius: 0 !important;
+                box-shadow: none !important;
+                min-height: unset !important;
+                height: 297mm !important;
+                overflow: hidden !important;
+                grid-template-columns: 215px 1fr !important;
+            }
+
+            /* ─ Sidebar fills full page height, space distributed evenly ─ */
+            .op-sidebar {
+                padding: 16px 14px !important;
+                gap: 0 !important;
+                background: #f5f3ff !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                border-right: 1px solid #ddd6fe !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: space-between !important;
+                height: 100% !important;
+            }
+
+            .op-photo {
+                width: 72px !important;
+                height: 72px !important;
+                border: 2px solid #7c3aed !important;
+                box-shadow: none !important;
+            }
+
+            .op-profile { gap: 5px !important; }
+
+            .op-name {
+                font-size: 16px !important;
+                line-height: 1.2 !important;
+                background: none !important;
+                -webkit-text-fill-color: #4c1d95 !important;
+                color: #4c1d95 !important;
+            }
+            .op-jobtitle {
+                font-size: 10px !important;
+                color: #6d28d9 !important;
+            }
+
+            .op-s-heading {
+                font-size: 9.5px !important;
+                margin-bottom: 5px !important;
+                padding-bottom: 3px !important;
+                color: #4c1d95 !important;
+                border-bottom: 1.5px solid rgba(109,40,217,0.3) !important;
+            }
+
+            .op-contact-list { gap: 5px !important; }
+            .op-contact-item {
+                font-size: 9.5px !important;
+                gap: 4px !important;
+                color: #374151 !important;
+                word-break: break-all;
+            }
+            .op-contact-item i { color: #7c3aed !important; }
+            .op-contact-item a { color: #374151 !important; }
+
+            .op-skill-group { margin-bottom: 0 !important; }
+            .op-skill-group-name {
+                font-size: 9.5px !important;
+                margin-bottom: 4px !important;
+                color: #374151 !important;
+            }
+            .op-skill-group-name i { color: #7c3aed !important; }
+            .op-pills { gap: 3px !important; }
+            .op-pill {
+                font-size: 8.5px !important;
+                padding: 1.5px 5px !important;
+                background: #ede9fe !important;
+                color: #4c1d95 !important;
+                border-color: #c4b5fd !important;
+            }
+
+            .op-cert-list { gap: 5px !important; }
+            .op-cert-item {
+                font-size: 9.5px !important;
+                gap: 4px !important;
+                color: #374151 !important;
+            }
+            .op-cert-item a { color: #374151 !important; text-decoration: none !important; }
+            .op-cert-item i.fa-award { color: #d97706 !important; }
+            .op-cert-item.badge-type i { color: #0891b2 !important; }
+
+            .op-award-list { gap: 5px !important; }
+            .op-award-item {
+                font-size: 9.5px !important;
+                gap: 4px !important;
+                color: #374151 !important;
+            }
+            .op-award-item i { color: #d97706 !important; }
+
+            /* ─ Main fills full page height, space distributed evenly ─ */
+            .op-main {
+                padding: 16px 18px !important;
+                gap: 0 !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: space-between !important;
+                height: 100% !important;
+            }
+
+            .op-m-heading {
+                font-size: 9px !important;
+                margin-bottom: 6px !important;
+                padding-bottom: 3px !important;
+                color: #4c1d95 !important;
+                border-bottom: 1.5px solid rgba(109,40,217,0.25) !important;
+            }
+            .op-m-heading i { color: #7c3aed !important; }
+
+            .op-summary {
+                font-size: 9.5px !important;
+                line-height: 1.65 !important;
+                color: #374151 !important;
+            }
+
+            .op-exp-item {
+                padding-bottom: 0 !important;
+                margin-bottom: 0 !important;
+                border-bottom-color: #e5e7eb !important;
+            }
+            .op-exp-header { margin-bottom: 2px !important; }
+            .op-exp-title {
+                font-size: 10.5px !important;
+                font-weight: 700 !important;
+                color: #111827 !important;
+            }
+            .op-exp-period {
+                font-size: 8px !important;
+                color: #6d28d9 !important;
+                background: #ede9fe !important;
+                padding: 1px 5px !important;
+            }
+            .op-exp-company {
+                font-size: 9px !important;
+                color: #6d28d9 !important;
+                margin-bottom: 4px !important;
+                font-weight: 600 !important;
+            }
+            .op-exp-bullets {
+                gap: 2px !important;
+                padding-left: 12px !important;
+            }
+            .op-exp-bullets li {
+                font-size: 9px !important;
+                line-height: 1.5 !important;
+                color: #374151 !important;
+            }
+
+            .op-exp-tags { display: none !important; }
+
+            .op-edu-grid { gap: 6px !important; }
+            .op-edu-item {
+                padding: 7px 10px !important;
+                background: #faf5ff !important;
+                border-color: #c4b5fd !important;
+            }
+            .op-edu-period { font-size: 8px !important; color: #6d28d9 !important; }
+            .op-edu-degree { font-size: 10px !important; color: #111827 !important; }
+            .op-edu-major  { font-size: 8.5px !important; color: #374151 !important; }
+            .op-edu-note   { font-size: 8px !important; color: #6d28d9 !important; }
+
+            /* Public Presence in print */
+            #op-pres-list > div {
+                padding: 4px 0 !important;
+                border-bottom-color: #e9e5ff !important;
+            }
+            #op-pres-list a { color: inherit !important; }
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 700px) {
+            .op-sheet { grid-template-columns: 1fr; }
+            .op-sidebar { border-right: none; border-bottom: 1px solid rgba(139,92,246,0.2); }
+            .op-edu-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="op-topbar">
+    <div class="container">
+        <div class="op-topbar-inner">
+            <div class="op-topbar-left">
+                <a href="index.html" class="op-back">
+                    <i class="fas fa-arrow-left"></i>
+                    <span id="op-back-text">Back to site</span>
+                </a>
+                <span class="op-title">
+                    <i class="fas fa-file-alt" style="color:var(--clr-primary)"></i>
+                    <span id="op-label">CV</span>
+                </span>
+            </div>
+            <div class="op-topbar-right">
+                <button class="icon-btn" data-theme-toggle aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <div class="lang-btns">
+                    <button class="lang-btn active" data-lang-btn="en">EN</button>
+                    <button class="lang-btn"        data-lang-btn="bg">BG</button>
+                </div>
+                <button onclick="window.print()" id="op-pdf-btn" class="op-print-btn">
+                    <i class="fas fa-print"></i>
+                    <span id="op-print-text">Save as PDF</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Page -->
+<div class="op-page">
+<div class="op-sheet" id="op-sheet-content">
+
+    <!-- ══ LEFT SIDEBAR ══ -->
+    <aside class="op-sidebar">
+
+        <!-- Profile -->
+        <div class="op-profile">
+            <img src="images/me.png" alt="Elisey Yordanov" class="op-photo">
+            <div class="op-name" id="op-name">Elisey Yordanov</div>
+            <div class="op-jobtitle" id="op-jobtitle">Data Engineer &amp; Software Developer</div>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <div class="op-s-heading" id="op-contact-title">Contact</div>
+            <div class="op-contact-list">
+                <div class="op-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span id="op-location">Ruse, Bulgaria</span>
+                </div>
+                <div class="op-contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+359888575501">+359 888 575 501</a>
+                </div>
+                <div class="op-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:elisei.elisei4@gmail.com">elisei.elisei4@gmail.com</a>
+                </div>
+                <div class="op-contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/elisey-yordanov-19625a1a0" target="_blank" rel="noopener">
+                        linkedin.com/in/elisey&#8209;yordanov
+                    </a>
+                </div>
+                <div class="op-contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/e-yordanov" target="_blank" rel="noopener">
+                        github.com/e&#8209;yordanov
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div>
+            <div class="op-s-heading" id="op-skills-title">Skills</div>
+
+            <div class="op-skill-group">
+                <div class="op-skill-group-name"><i class="fas fa-database"></i> <span id="op-sk1">Data Engineering</span></div>
+                <div class="op-pills">
+                    <span class="op-pill">BigQuery</span><span class="op-pill">MySQL</span>
+                    <span class="op-pill">MSSQL</span><span class="op-pill">Cloud SQL</span>
+                    <span class="op-pill">SSIS / SSRS</span><span class="op-pill">ETL / CDC</span>
+                    <span class="op-pill">PowerBI</span><span class="op-pill">Looker</span>
+                </div>
+            </div>
+
+            <div class="op-skill-group">
+                <div class="op-skill-group-name"><i class="fas fa-cloud"></i> <span id="op-sk2">Cloud</span></div>
+                <div class="op-pills">
+                    <span class="op-pill">GCP</span><span class="op-pill">Cloud Run</span>
+                    <span class="op-pill">Kubernetes</span><span class="op-pill">Docker</span>
+                    <span class="op-pill">VMware</span><span class="op-pill">CI/CD</span>
+                </div>
+            </div>
+
+            <div class="op-skill-group">
+                <div class="op-skill-group-name"><i class="fas fa-brain"></i> <span id="op-sk3">AI / ML</span></div>
+                <div class="op-pills">
+                    <span class="op-pill">YOLOv8</span><span class="op-pill">Deepstream</span>
+                    <span class="op-pill">Vertex AI</span><span class="op-pill">LLM / NLP</span>
+                    <span class="op-pill">Generative AI</span>
+                </div>
+            </div>
+
+            <div class="op-skill-group">
+                <div class="op-skill-group-name"><i class="fas fa-code"></i> <span id="op-sk4">Programming</span></div>
+                <div class="op-pills">
+                    <span class="op-pill">Python</span><span class="op-pill">PHP</span>
+                    <span class="op-pill">JavaScript</span><span class="op-pill">C#</span>
+                    <span class="op-pill">SQL</span><span class="op-pill">Bash</span>
+                </div>
+            </div>
+
+            <div class="op-skill-group">
+                <div class="op-skill-group-name"><i class="fas fa-shield-alt"></i> <span id="op-sk5">Security</span></div>
+                <div class="op-pills">
+                    <span class="op-pill">F5 WAF</span><span class="op-pill">AppDynamics</span>
+                    <span class="op-pill">Splunk / SIEM</span><span class="op-pill">Pen Testing</span>
+                    <span class="op-pill">DDoS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certifications -->
+        <div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;">
+                <div class="op-s-heading" id="op-certs-title" style="margin-bottom:0;">Certifications</div>
+                <a href="https://www.credly.com/users/elisey-yordanov/badges#credly" target="_blank" rel="noopener"
+                   style="font-size:0.55rem;color:var(--clr-primary);text-decoration:none;display:flex;align-items:center;gap:2px;font-weight:600;opacity:0.85;">
+                    <i class="fas fa-external-link-alt" style="font-size:0.5rem;"></i> Credly
+                </a>
+            </div>
+            <div class="op-cert-list">
+                <div class="op-cert-item">
+                    <i class="fas fa-award"></i>
+                    <a href="https://www.credly.com/badges/b7700dd5-9a0b-45b9-b768-ff3de6742d8f/public_url" target="_blank" rel="noopener">
+                        GCP Professional Data Engineer ↗
+                    </a>
+                </div>
+                <div class="op-cert-item">
+                    <i class="fas fa-award"></i>
+                    <a href="https://www.credly.com/badges/0f6e8fbd-c744-4722-aec7-1845e0884a45/public_url" target="_blank" rel="noopener">
+                        GCP Professional ML Engineer ↗
+                    </a>
+                </div>
+                <div class="op-cert-item">
+                    <i class="fas fa-award"></i>
+                    <a href="https://www.credly.com/badges/a2590a10-3a72-4b32-a5f7-131abd3aa8bc/public_url" target="_blank" rel="noopener">
+                        GCP Professional Cloud Developer ↗
+                    </a>
+                </div>
+                <div class="op-cert-item badge-type">
+                    <i class="fas fa-star"></i>
+                    <a href="https://www.credly.com/badges/8572a53e-c75d-4762-987f-10e1146c54e0/public_url" target="_blank" rel="noopener">
+                        GCP Build &amp; Deploy Generative AI ↗
+                    </a>
+                </div>
+                <div class="op-cert-item badge-type">
+                    <i class="fas fa-star"></i>
+                    <a href="https://www.credly.com/badges/239ba763-40c4-4713-9a35-e1727d964757/public_url" target="_blank" rel="noopener">
+                        GCP Enterprise Search &amp; Conv. AI ↗
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Awards -->
+        <div>
+            <div class="op-s-heading" id="op-awards-title">Awards</div>
+            <div class="op-award-list">
+                <div class="op-award-item">
+                    <i class="fas fa-trophy"></i>
+                    <span id="op-award1">John Atanasov Award — Best Technical Student (2021)</span>
+                </div>
+                <div class="op-award-item">
+                    <i class="fas fa-medal"></i>
+                    <span id="op-award2">Ministry of Education Award — Top Graduate, IT Career Program (2022)</span>
+                </div>
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- ══ RIGHT MAIN ══ -->
+    <main class="op-main">
+
+        <!-- Summary -->
+        <div class="op-m-section">
+            <div class="op-m-heading"><i class="fas fa-user"></i> <span id="op-summary-title">Professional Summary</span></div>
+            <p class="op-summary" id="op-summary">
+                Data Engineer and Software Developer with 5+ years of experience building data pipelines, AI/ML systems, cloud
+                infrastructure, and security solutions. Started at Econt Express at age 17, progressing from data engineering through
+                information security. Currently at IT Partner Ltd delivering complex data and AI projects at enterprise scale.
+                Holder of 3 Google Cloud Professional certifications.
+            </p>
+        </div>
+
+        <!-- Experience -->
+        <div class="op-m-section">
+            <div class="op-m-heading"><i class="fas fa-briefcase"></i> <span id="op-exp-title">Experience</span></div>
+
+            <div class="op-exp-item">
+                <div class="op-exp-header">
+                    <div>
+                        <div class="op-exp-title" id="op-e1-title">Software Developer</div>
+                        <div class="op-exp-company">IT Partner Ltd &nbsp;·&nbsp; Shumen / Remote</div>
+                    </div>
+                    <span class="op-exp-period" id="op-e1-period">Feb 2023 – Present</span>
+                </div>
+                <ul class="op-exp-bullets" id="op-e1-bullets">
+                    <li>Real-Time BigQuery DWH with CDC — streaming all operational databases, petabyte-scale analytics</li>
+                    <li>VisionAI: in-house YOLOv8 training platform, PTZ automation, hybrid LPR, Deepstream on NVIDIA GPUs</li>
+                    <li>Talk2SQL — natural language to BigQuery SQL chatbot operating on the full enterprise DWH</li>
+                    <li>Capacity Analytics Suite (Lines, Zones, Offices) — real-time load monitoring across Econt's logistics network</li>
+                    <li>AI integrations: invoice analysis, logistics profitability, AI agents for business automation</li>
+                    <li>Led IT team migration Econt → IT Partner; authored internal engineering standards</li>
+                </ul>
+                <div class="op-exp-tags">
+                    <span class="op-tag">BigQuery</span><span class="op-tag">Python</span><span class="op-tag">GCP</span>
+                    <span class="op-tag">YOLOv8</span><span class="op-tag">CDC</span><span class="op-tag">Kubernetes</span>
+                    <span class="op-tag">AI/ML</span><span class="op-tag">PHP</span>
+                </div>
+            </div>
+
+            <div class="op-exp-item">
+                <div class="op-exp-header">
+                    <div>
+                        <div class="op-exp-title" id="op-e2-title">Information Security Specialist</div>
+                        <div class="op-exp-company">Econt Express &nbsp;·&nbsp; Ruse</div>
+                    </div>
+                    <span class="op-exp-period" id="op-e2-period">Jul 2022 – Feb 2023</span>
+                </div>
+                <ul class="op-exp-bullets" id="op-e2-bullets">
+                    <li>Co-designed & specified requirements for the Network Management Center (DDoS mitigation, internet connectivity)</li>
+                    <li>Co-designed email security system architecture (DKIM, SPF, PTR, blacklists, anti-phishing)</li>
+                    <li>Internal penetration testing; security breach monitoring via SIEM/Splunk; post-incident reports</li>
+                    <li>Product Owner of AppDynamics APM & F5 WAF</li>
+                </ul>
+                <div class="op-exp-tags">
+                    <span class="op-tag">F5 WAF</span><span class="op-tag">AppDynamics</span><span class="op-tag">Splunk</span>
+                    <span class="op-tag">SIEM</span><span class="op-tag">Pen Testing</span><span class="op-tag">DDoS</span>
+                </div>
+            </div>
+
+            <div class="op-exp-item">
+                <div class="op-exp-header">
+                    <div>
+                        <div class="op-exp-title" id="op-e3-title">Business Continuity Specialist</div>
+                        <div class="op-exp-company">Econt Express &nbsp;·&nbsp; Ruse</div>
+                    </div>
+                    <span class="op-exp-period" id="op-e3-period">Jan 2022 – Jul 2022</span>
+                </div>
+                <ul class="op-exp-bullets" id="op-e3-bullets">
+                    <li>Product Owner of AppDynamics (APM) & F5 WAF</li>
+                    <li>System failure root-cause analysis; emergency technical support to the IT team</li>
+                </ul>
+                <div class="op-exp-tags">
+                    <span class="op-tag">AppDynamics</span><span class="op-tag">F5 WAF</span><span class="op-tag">Incident Management</span>
+                </div>
+            </div>
+
+            <div class="op-exp-item">
+                <div class="op-exp-header">
+                    <div>
+                        <div class="op-exp-title" id="op-e4-title">Junior Data Engineer</div>
+                        <div class="op-exp-company">Econt Express &nbsp;·&nbsp; Ruse</div>
+                    </div>
+                    <span class="op-exp-period" id="op-e4-period">Jul 2020 – Jan 2022</span>
+                </div>
+                <ul class="op-exp-bullets" id="op-e4-bullets">
+                    <li>ETL pipelines from Core & secondary systems into the DWH; management dashboards & automated reports</li>
+                    <li>Administered all Econt cloud environments and GitHub organization</li>
+                </ul>
+                <div class="op-exp-tags">
+                    <span class="op-tag">MySQL</span><span class="op-tag">MSSQL</span><span class="op-tag">SSIS</span>
+                    <span class="op-tag">SSRS</span><span class="op-tag">PowerBI</span><span class="op-tag">Cloud</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="op-m-section">
+            <div class="op-m-heading"><i class="fas fa-graduation-cap"></i> <span id="op-edu-title">Education</span></div>
+            <div class="op-edu-grid">
+                <div class="op-edu-item">
+                    <div class="op-edu-period">2020 – 2022</div>
+                    <div class="op-edu-degree" id="op-edu1-deg">IT Career — National Program</div>
+                    <div class="op-edu-major" id="op-edu1-maj">Backend Developer Pathway</div>
+                    <div class="op-edu-note" id="op-edu1-note">Honors (5.50/6.00) · Minister of Education Award — top graduate</div>
+                </div>
+                <div class="op-edu-item">
+                    <div class="op-edu-period">2016 – 2021</div>
+                    <div class="op-edu-degree" id="op-edu2-deg">SU Hristo Botev, Ruse</div>
+                    <div class="op-edu-major" id="op-edu2-maj">Technical Track — IT</div>
+                    <div class="op-edu-note" id="op-edu2-note">John Atanasov Award — best technical student</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Public Presence -->
+        <div class="op-m-section">
+            <div class="op-m-heading"><i class="fas fa-microphone"></i> <span id="op-pres-title">Public Presence</span></div>
+            <div id="op-pres-list" style="display:flex;flex-direction:column;gap:0.6rem;"></div>
+        </div>
+
+    </main>
+
+</div><!-- /op-sheet -->
+</div><!-- /op-page -->
+
+<!-- Back to Top -->
+<button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<script src="translations.js"></script>
+<script>
+'use strict';
+
+/* ── Theme ── */
+const _t = localStorage.getItem('ey-theme') ||
+           (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+document.documentElement.setAttribute('data-theme', _t);
+document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
+    const ic = btn.querySelector('i');
+    if (ic) ic.className = _t === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    btn.addEventListener('click', () => {
+        const cur = document.documentElement.getAttribute('data-theme');
+        const nxt = cur === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', nxt);
+        localStorage.setItem('ey-theme', nxt);
+        document.querySelectorAll('[data-theme-toggle] i').forEach(i => {
+            i.className = nxt === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        });
+    });
+});
+
+/* ── Translations ── */
+const OP_CONTENT = {
+    en: {
+        back: "← Back to site", label: "CV", print: "Save as PDF",
+        name: "Elisey Yordanov", jobtitle: "Data Engineer & Software Developer", location: "Ruse, Bulgaria",
+        contactTitle: "Contact", skillsTitle: "Skills", certsTitle: "Certifications", awardsTitle: "Awards",
+        sk1: "Data Engineering", sk2: "Cloud", sk3: "AI / ML", sk4: "Programming", sk5: "Security",
+        award1: "John Atanasov Award — Best Technical Student (2021)",
+        award2: "Ministry of Education Award — Top Graduate, IT Career Program (2022)",
+        summaryTitle: "Professional Summary",
+        summary: "Data Engineer and Software Developer with 5+ years of experience building data pipelines, AI/ML systems, cloud infrastructure, and security solutions. Started at Econt Express at age 17, progressing from data engineering through information security. Currently at IT Partner Ltd delivering complex data and AI projects at enterprise scale. Holder of 3 Google Cloud Professional certifications.",
+        expTitle: "Experience",
+        e1Title: "Software Developer",      e1Period: "Feb 2023 – Present",
+        e2Title: "Information Security Specialist", e2Period: "Jul 2022 – Feb 2023",
+        e3Title: "Business Continuity Specialist",  e3Period: "Jan 2022 – Jul 2022",
+        e4Title: "Junior Data Engineer",    e4Period: "Jul 2020 – Jan 2022",
+        e1b: ["Real-Time BigQuery DWH with CDC — streaming all operational databases, petabyte-scale analytics",
+              "VisionAI: in-house YOLOv8 training platform, PTZ automation, hybrid LPR, Deepstream on NVIDIA GPUs",
+              "Talk2SQL — natural language to BigQuery SQL chatbot operating on the full enterprise DWH",
+              "Capacity Analytics Suite (Lines, Zones, Offices) — real-time load monitoring across Econt's logistics network",
+              "AI integrations: invoice analysis, logistics profitability, AI agents for business automation",
+              "Led IT team migration Econt → IT Partner; authored internal engineering standards"],
+        e2b: ["Co-designed & specified requirements for the Network Management Center (DDoS mitigation, internet connectivity)",
+              "Co-designed email security system architecture (DKIM, SPF, PTR, blacklists, anti-phishing)",
+              "Internal penetration testing; security breach monitoring via SIEM/Splunk; post-incident reports",
+              "Product Owner of AppDynamics APM & F5 WAF"],
+        e3b: ["Product Owner of AppDynamics (APM) & F5 WAF",
+              "System failure root-cause analysis; emergency technical support to the IT team"],
+        e4b: ["ETL pipelines from Core & secondary systems into the DWH; management dashboards & automated reports",
+              "Administered all Econt cloud environments and GitHub organization"],
+        eduTitle: "Education",
+        edu1Deg: "IT Career — National Program", edu1Maj: "Backend Developer Pathway · SoftUni-based curriculum",
+        edu1Note: "Honors (5.50/6.00) · Minister of Education Award — top graduate",
+        edu2Deg: "SU Hristo Botev, Ruse",              edu2Maj: "Technical Track — IT",
+        edu2Note: "John Atanasov Award — best technical student"
+    },
+    bg: {
+        back: "← Обратно", label: "CV", print: "Запази като PDF",
+        name: "Елисей Йорданов", jobtitle: "Data Engineer и Разработчик", location: "Русе, България",
+        contactTitle: "Контакти", skillsTitle: "Умения", certsTitle: "Сертификати", awardsTitle: "Награди",
+        sk1: "Data Engineering", sk2: "Cloud", sk3: "AI / ML", sk4: "Програмиране", sk5: "Сигурност",
+        award1: "Награда Джон Атанасов — Най-добър технически ученик (2021)",
+        award2: "Награда МОН — Отличник на програма ИТ Кариера (2022)",
+        summaryTitle: "Профил",
+        summary: "Data Engineer и Разработчик с 5+ години опит в изграждане на data pipelines, AI/ML системи, облачна инфраструктура и решения за сигурност. Започнах в Еконт Експрес на 17 години, преминавайки от data engineering до информационна сигурност. В момента в Ай Ти Партньор ЕООД, реализирайки сложни data и AI проекти. Притежавам 3 Google Cloud Professional сертификата.",
+        expTitle: "Трудов стаж",
+        e1Title: "Разработчик на Софтуер",         e1Period: "Февр. 2023 – Настояще",
+        e2Title: "Специалист Информационна Сигурност", e2Period: "Юли 2022 – Февр. 2023",
+        e3Title: "Специалист Непрекъснатост",       e3Period: "Ян. 2022 – Юли 2022",
+        e4Title: "Junior Data Engineer",             e4Period: "Юли 2020 – Ян. 2022",
+        e1b: ["Real-Time BigQuery DWH с CDC — поточна обработка на всички оперативни бази, петабайтов мащаб",
+              "VisionAI: In-House платформа за трениране на YOLOv8, автоматизация на PTZ камери, хибриден LPR, Deepstream на NVIDIA",
+              "Talk2SQL — чатбот преобразуващ естествен език в BigQuery SQL върху целия DWH",
+              "Капацитет: Линии, Зони, Офиси — мониторинг на натоварването в логистичната мрежа",
+              "AI интеграции: анализ на фактури, рентабилност, AI агенти за бизнес автоматизация",
+              "Ръководих миграцията на ИТ екипа Еконт → Ай Ти Партньор; написах вътрешни стандарти"],
+        e2b: ["Съавтор на архитектурата и изискванията за Network Management Center (DDoS митигиране)",
+              "Съавтор на системата за имейл сигурност (DKIM, SPF, PTR, черни списъци, anti-phishing)",
+              "Вътрешни penetration тестове; мониторинг на пробиви чрез SIEM/Splunk; доклади след инциденти",
+              "Продуктов собственик на AppDynamics APM & F5 WAF"],
+        e3b: ["Продуктов собственик на AppDynamics (APM) & F5 WAF",
+              "Анализ на откази; спешна техническа поддръжка на ИТ екипа"],
+        e4b: ["ETL процеси от Core и вторични системи към DWH; управленски табла и автоматизирани справки",
+              "Администриране на всички облачни среди и GitHub организацията на Еконт"],
+        eduTitle: "Образование",
+        edu1Deg: "ИТ Кариера — Национална програма", edu1Maj: "Backend разработчик · Учебна програма базирана на SoftUni",
+        edu1Note: "Отличен (5.50/6.00) · Награда МОН — отличник на випуска",
+        edu2Deg: "СУ Христо Ботев, Русе",              edu2Maj: "Технически профил — ИТ",
+        edu2Note: "Награда Джон Атанасов — най-добър технически ученик"
+    }
+};
+
+function applyOPLang(lang) {
+    const c = OP_CONTENT[lang] || OP_CONTENT.en;
+    document.querySelectorAll('[data-lang-btn]').forEach(b =>
+        b.classList.toggle('active', b.getAttribute('data-lang-btn') === lang));
+
+    const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+    const setBullets = (id, arr) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.innerHTML = arr.map(b => `<li>${b}</li>`).join('');
+    };
+
+    set('op-back-text', c.back); set('op-label', c.label); set('op-print-text', c.print);
+    set('op-name', c.name); set('op-jobtitle', c.jobtitle); set('op-location', c.location);
+    set('op-contact-title', c.contactTitle); set('op-skills-title', c.skillsTitle);
+    set('op-certs-title', c.certsTitle); set('op-awards-title', c.awardsTitle);
+    set('op-sk1', c.sk1); set('op-sk2', c.sk2); set('op-sk3', c.sk3);
+    set('op-sk4', c.sk4); set('op-sk5', c.sk5);
+    set('op-award1', c.award1); set('op-award2', c.award2);
+    set('op-summary-title', c.summaryTitle); set('op-summary', c.summary);
+    set('op-exp-title', c.expTitle);
+    set('op-e1-title', c.e1Title); set('op-e1-period', c.e1Period);
+    set('op-e2-title', c.e2Title); set('op-e2-period', c.e2Period);
+    set('op-e3-title', c.e3Title); set('op-e3-period', c.e3Period);
+    set('op-e4-title', c.e4Title); set('op-e4-period', c.e4Period);
+    setBullets('op-e1-bullets', c.e1b); setBullets('op-e2-bullets', c.e2b);
+    setBullets('op-e3-bullets', c.e3b); setBullets('op-e4-bullets', c.e4b);
+    set('op-edu-title', c.eduTitle);
+    set('op-edu1-deg', c.edu1Deg); set('op-edu1-maj', c.edu1Maj); set('op-edu1-note', c.edu1Note);
+    set('op-edu2-deg', c.edu2Deg); set('op-edu2-maj', c.edu2Maj); set('op-edu2-note', c.edu2Note);
+
+    // Public Presence
+    set('op-pres-title', lang === 'bg' ? 'Публична активност' : 'Public Presence');
+    const opPresList = document.getElementById('op-pres-list');
+    if (opPresList && typeof TALKS !== 'undefined') {
+        const lbl = lang === 'bg'
+            ? { watch: 'Гледай', slides: 'Слайдове', lightning: 'Lightning' }
+            : { watch: 'Watch', slides: 'Slides', lightning: 'Lightning' };
+        opPresList.innerHTML = TALKS.map(ev => `
+            <div style="padding:0.45rem 0;border-bottom:1px solid var(--border, #e9e5ff);">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.2rem;">
+                    <span style="font-size:0.78rem;font-weight:700;color:var(--text,#111);">
+                        ${ev.conferenceUrl ? `<a href="${ev.conferenceUrl}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${ev.conference} ↗</a>` : ev.conference}
+                        <span style="font-size:0.65rem;font-weight:400;color:var(--text-muted,#6b7280);margin-left:0.3rem;">${ev.organizer}</span>
+                    </span>
+                    <span style="font-size:0.65rem;color:var(--clr-primary,#7c3aed);font-family:monospace;">${ev.year}</span>
+                </div>
+                ${ev.talk ? `<div style="font-size:0.72rem;color:var(--text-secondary,#374151);margin-bottom:0.25rem;display:flex;align-items:center;gap:0.3rem;"><i class="fas fa-microphone" style="color:var(--clr-primary,#7c3aed);font-size:0.6rem;"></i> ${ev.talk}</div>` : ''}
+                <div style="display:flex;flex-wrap:wrap;gap:0.3rem;">
+                    ${ev.talkUrl ? `<a href="${ev.talkUrl}" target="_blank" rel="noopener" style="font-size:0.65rem;color:#dc2626;text-decoration:none;"><i class="fab fa-youtube"></i> ${lbl.watch}</a>` : ''}
+                    ${ev.lightningTalkUrl ? `<a href="${ev.lightningTalkUrl}" target="_blank" rel="noopener" style="font-size:0.65rem;color:#d97706;text-decoration:none;margin-left:0.4rem;"><i class="fas fa-bolt"></i> ${lbl.lightning}</a>` : ''}
+                    ${ev.presentationUrl ? `<a href="${ev.presentationUrl}" target="_blank" rel="noopener" style="font-size:0.65rem;color:var(--clr-primary,#7c3aed);text-decoration:none;margin-left:0.4rem;"><i class="fas fa-desktop"></i> ${lbl.slides}</a>` : ''}
+                </div>
+            </div>
+        `).join('');
+    }
+
+}
+
+const _l = localStorage.getItem('ey-lang') || 'en';
+applyOPLang(_l);
+document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const l = btn.getAttribute('data-lang-btn');
+        localStorage.setItem('ey-lang', l);
+        applyOPLang(l);
+    });
+});
+
+/* ── Back to top ── */
+const btt = document.getElementById('back-to-top');
+if (btt) {
+    window.addEventListener('scroll', () => btt.classList.toggle('visible', window.scrollY > 300));
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
+</script>
+
+</body>
+</html>
