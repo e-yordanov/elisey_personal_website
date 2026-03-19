@@ -67,7 +67,7 @@ const translations = {
         hero: {
             greeting: "Hi, I'm",
             name: "Elisey Yordanov",
-            typed: ["Data Engineer", "Software Developer", "Cloud Architect", "AI Enthusiast"],
+            typed: ["Data Engineer", "Software Developer", "Cloud Developer", "ML Engineer", "Cloud Architect", "AI Enthusiast"],
             subtitle: "Building intelligent data systems, AI solutions, and cloud infrastructure.",
             cta1: "View My Work",
             cta2: "Get In Touch",
@@ -344,7 +344,7 @@ const translations = {
         hero: {
             greeting: "Здравейте, аз съм",
             name: "Елисей Йорданов",
-            typed: ["Data Engineer", "Разработчик", "Cloud Архитект", "AI Ентусиаст"],
+            typed: ["Data Engineer", "Разработчик", "Cloud Developer", "ML Engineer", "Cloud Архитект", "AI Ентусиаст"],
             subtitle: "Изграждам интелигентни системи за данни, AI решения и облачна инфраструктура.",
             cta1: "Вижте работата ми",
             cta2: "Свържете се",

@@ -432,7 +432,12 @@ input, textarea { font-family: inherit; }
     min-height: 2.4rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
+}
+
+@media (min-width: 1025px) {
+    .hero-typed-wrap { justify-content: flex-start; }
 }
 
 .typed-text { color: var(--clr-primary-light); }
