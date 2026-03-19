@@ -245,7 +245,7 @@ class LanguageManager {
                href="${c.link}" target="_blank" rel="noopener noreferrer"
                data-aos="zoom-in" data-aos-delay="${i * 80}">
                 ${c.type === 'professional'
-                    ? `<div class="cert-pro-badge"><i class="fas fa-award"></i> Professional</div>`
+                    ? `<div class="cert-pro-badge"><i class="fas fa-award"></i> Professional Certification</div>`
                     : `<div class="cert-skill-badge"><i class="fas fa-star"></i> ${t.badgeLabel}</div>`
                 }
                 <div class="cert-img-wrap">

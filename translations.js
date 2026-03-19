@@ -88,7 +88,7 @@ const translations = {
             educationTitle: "Education & Training",
             edu: [
                 {
-                    period: "2020 – 2022",
+                    period: "2019 – 2021",
                     degree: "IT Career — National Program",
                     major: "Backend Developer Pathway · SoftUni-based curriculum",
                     note: "Diploma with Honors (5.50/6.00) · Awarded by the Minister of Education as top graduate of the cohort"
@@ -103,8 +103,8 @@ const translations = {
             awardsTitle: "Awards & Recognition",
             awards: [
                 "John Atanasov Award — Best Technical Student (High School, 2021)",
-                "Ministry of Education Award — Top Graduate, IT Career National Program (2022)",
-                "3× Google Cloud Professional Certified (+ 2 Skill Badges)"
+                "Ministry of Education Award — Top Graduate, IT Career National Program (2021)",
+                "3× Google Cloud Professional Certified (+ 2 Advanced Skill Badges)"
             ]
         },
         skills: {
@@ -121,13 +121,13 @@ const translations = {
                     name: "Cloud & Infrastructure",
                     icon: "fas fa-cloud",
                     color: "indigo",
-                    items: ["Google Cloud Platform", "Cloud Build", "Cloud Run", "Kubernetes", "VMware", "Docker", "CI/CD", "Terraform", "Linux", "Windows Server"]
+                    items: ["Google Cloud Platform", "Cloud Build", "Cloud Run", "Cloud Storage (GCS)", "Pub/Sub", "Cloud Monitoring", "Kubernetes", "VMware", "Docker", "CI/CD", "Terraform", "Linux", "Windows Server"]
                 },
                 {
                     name: "AI & Machine Learning",
                     icon: "fas fa-brain",
                     color: "pink",
-                    items: ["YOLOv8", "Deepstream", "NVIDIA GPU", "Vertex AI", "LLM / NLP", "Computer Vision", "Generative AI", "RAG", "ML Training Pipelines"]
+                    items: ["PyTorch", "OpenCV", "CUDA", "YOLOv8", "Deepstream", "NVIDIA GPU", "Vertex AI", "LLM / NLP", "Computer Vision", "Generative AI", "RAG", "ML Training Pipelines"]
                 },
                 {
                     name: "Programming",
@@ -243,11 +243,11 @@ const translations = {
                     gradient: "grad-pink"
                 },
                 {
-                    title: "Network Management Center",
-                    description: "As the business-side requester and co-designer, defined the architecture and requirements for Econt's centralized NMC — covering DDoS mitigation and management of all external internet connectivity across data centers. Collaborated closely with IT Partner's engineering team through the full delivery.",
-                    tags: ["F5", "DDoS", "Network Engineering", "Security", "Architecture"],
-                    icon: "fas fa-network-wired",
-                    gradient: "grad-cyan"
+                    title: "Logistics Profitability System",
+                    description: "Built an analytics system calculating the profitability of individual segments across Econt's logistics network — which transport lines, zones, and offices generate positive returns. Extracts and transforms financial and operational data end-to-end, delivering management-level profitability reports directly to senior leadership.",
+                    tags: ["BigQuery", "Python", "ETL", "SQL", "PowerBI", "Data Engineering"],
+                    icon: "fas fa-chart-line",
+                    gradient: "grad-green"
                 },
                 {
                     title: "Capacity Analytics Suite",
@@ -365,7 +365,7 @@ const translations = {
             educationTitle: "Образование",
             edu: [
                 {
-                    period: "2020 – 2022",
+                    period: "2019 – 2021",
                     degree: "ИТ Кариера — Национална програма",
                     major: "Пътека Backend разработчик · Учебна програма базирана на SoftUni",
                     note: "Диплома с отличен (5.50/6.00) · Награден от министъра на образованието като отличник на випуска"
@@ -380,8 +380,8 @@ const translations = {
             awardsTitle: "Награди и отличия",
             awards: [
                 "Награда Джон Атанасов — Най-добър технически ученик (2021)",
-                "Награда от МОН — Отличник на програма ИТ Кариера (2022)",
-                "3× Google Cloud Professional сертифициран (+ 2 Skill Badge)"
+                "Награда от МОН — Отличник на програма ИТ Кариера (2021)",
+                "3× Google Cloud Professional сертифициран (+ 2 Advanced Skill Badge)"
             ]
         },
         skills: {
@@ -398,13 +398,13 @@ const translations = {
                     name: "Cloud & Инфраструктура",
                     icon: "fas fa-cloud",
                     color: "indigo",
-                    items: ["Google Cloud Platform", "Cloud Build", "Cloud Run", "Kubernetes", "VMware", "Docker", "CI/CD", "Terraform", "Linux", "Windows Server"]
+                    items: ["Google Cloud Platform", "Cloud Build", "Cloud Run", "Cloud Storage (GCS)", "Pub/Sub", "Cloud Monitoring", "Kubernetes", "VMware", "Docker", "CI/CD", "Terraform", "Linux", "Windows Server"]
                 },
                 {
                     name: "AI & Machine Learning",
                     icon: "fas fa-brain",
                     color: "pink",
-                    items: ["YOLOv8", "Deepstream", "NVIDIA GPU", "Vertex AI", "LLM / NLP", "Computer Vision", "Generative AI", "RAG", "ML Training Pipelines"]
+                    items: ["PyTorch", "OpenCV", "CUDA", "YOLOv8", "Deepstream", "NVIDIA GPU", "Vertex AI", "LLM / NLP", "Computer Vision", "Generative AI", "RAG", "ML Training Pipelines"]
                 },
                 {
                     name: "Програмиране",
@@ -520,11 +520,11 @@ const translations = {
                     gradient: "grad-pink"
                 },
                 {
-                    title: "Network Management Center",
-                    description: "Като бизнес изисквател и съавтор на архитектурата, дефинирах структурата и изискванията за централизирания NMC на Еконт — обхващащ DDoS митигиране и управление на всички външни интернет свързаности на data центровете. Работих в тясно сътрудничество с инженерния екип на Ай Ти Партньор по цялото внедряване.",
-                    tags: ["F5", "DDoS", "Мрежово инженерство", "Сигурност", "Инфраструктура"],
-                    icon: "fas fa-network-wired",
-                    gradient: "grad-cyan"
+                    title: "Система за рентабилност на логистиката",
+                    description: "Аналитична система изчисляваща рентабилността на отделните сегменти в логистичната мрежа на Еконт — кои транспортни линии, зони и офиси генерират положителна доходност. Извлича и трансформира финансови и оперативни данни от край до край, предоставяйки management-ниво репорти директно на висшето ръководство.",
+                    tags: ["BigQuery", "Python", "ETL", "SQL", "PowerBI", "Data Engineering"],
+                    icon: "fas fa-chart-line",
+                    gradient: "grad-green"
                 },
                 {
                     title: "Аналитичен пакет Капацитет",
