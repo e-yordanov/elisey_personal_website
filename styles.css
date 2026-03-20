@@ -98,6 +98,7 @@ html {
     scroll-behavior: smooth;
     font-size: 16px;
     scroll-padding-top: var(--nav-h);
+    overflow-x: hidden;   /* prevent horizontal overflow from causing mobile zoom-out */
 }
 
 body {

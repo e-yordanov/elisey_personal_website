@@ -81,6 +81,13 @@
             transform: translateY(-1px);
             box-shadow: 0 4px 20px rgba(139,92,246,0.55);
         }
+        /* On small screens: icon-only print button so EN/BG has room */
+        @media (max-width: 480px) {
+            #op-print-text { display: none; }
+            .op-print-btn { padding: 0.45rem 0.65rem; }
+            #op-back-text { display: none; }
+            .op-back { padding: 0.4rem; }
+        }
         .op-alt-link {
             font-size: 0.78rem;
             color: var(--text-muted);
