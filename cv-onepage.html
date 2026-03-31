@@ -507,6 +507,8 @@
             box-shadow: 0 3px 14px rgba(139,92,246,0.18);
             transform: translateY(-2px);
         }
+        [data-theme="dark"] .op-cert-card-link .op-edu-note { color: #b8aed4; }
+        [data-theme="light"] .op-cert-card-link .op-edu-note { color: #6d28d9; }
 
         .op-edu-item {
             background: rgba(139,92,246,0.04);
@@ -814,8 +816,13 @@
             .op-cert-img-wrap { margin-bottom: 2px !important; }
             .op-cert-card-link { border-top-width: 1.5px !important; padding: 6px 7px !important; }
             .op-certs-credly { display: none !important; }
-            /* Hide cert descriptions in print - saves ~2 lines per card */
-            .op-cert-card-link .op-edu-note { display: none !important; }
+            .op-cert-card-link .op-edu-note {
+                display: block !important;
+                font-size: 7px !important;
+                line-height: 1.5 !important;
+                color: #b8aed4 !important;
+                margin-top: 3px !important;
+            }
             .op-edu-item {
                 padding: 7px 10px !important;
                 background: #faf5ff !important;
@@ -870,7 +877,7 @@
                     <button class="lang-btn active" data-lang-btn="en">EN</button>
                     <button class="lang-btn"        data-lang-btn="bg">BG</button>
                 </div>
-                <button onclick="window.print()" id="op-pdf-btn" class="op-print-btn">
+                <button onclick="opPrintCV()" id="op-pdf-btn" class="op-print-btn">
                     <i class="fas fa-print"></i>
                     <span id="op-print-text">Save as PDF</span>
                 </button>
@@ -890,7 +897,7 @@
         <div class="op-profile">
             <img src="images/me.png" alt="Elisey Yordanov" class="op-photo">
             <div class="op-name" id="op-name">Elisey Yordanov</div>
-            <div class="op-jobtitle" id="op-jobtitle">Data Engineer &amp; Software Developer</div>
+            <div class="op-jobtitle" id="op-jobtitle">Senior Data Engineer</div>
         </div>
 
         <!-- Contact -->
@@ -1041,7 +1048,7 @@
             <p class="op-summary" id="op-summary">
                 Data Engineer and Software Developer with 5+ years of experience building data pipelines, AI/ML systems, cloud
                 infrastructure, and security solutions. Started at Econt Express at age 17, progressing from intern to
-                Information Security Specialist. Currently at IT Partner Ltd - the company powering Econt's entire IT
+                Information Security Expert. Currently at IT Partner Ltd - the company powering Econt's entire IT
                 ecosystem - delivering complex data, AI, and infrastructure projects at enterprise scale.
                 Holder of 3 Google Cloud Professional certifications.
             </p>
@@ -1054,7 +1061,7 @@
             <div class="op-exp-item">
                 <div class="op-exp-header">
                     <div>
-                        <div class="op-exp-title" id="op-e1-title">Software Developer</div>
+                        <div class="op-exp-title" id="op-e1-title">Senior Data Engineer</div>
                         <div class="op-exp-company">IT Partner Ltd &nbsp;·&nbsp; Shumen / Remote</div>
                     </div>
                     <span class="op-exp-period" id="op-e1-period">Feb 2023 – Present</span>
@@ -1077,7 +1084,7 @@
             <div class="op-exp-item">
                 <div class="op-exp-header">
                     <div>
-                        <div class="op-exp-title" id="op-e2-title">Information Security Specialist</div>
+                        <div class="op-exp-title" id="op-e2-title">Information Security Expert</div>
                         <div class="op-exp-company">Econt Express &nbsp;·&nbsp; Ruse</div>
                     </div>
                     <span class="op-exp-period" id="op-e2-period">Jul 2022 – Feb 2023</span>
@@ -1097,7 +1104,7 @@
             <div class="op-exp-item">
                 <div class="op-exp-header">
                     <div>
-                        <div class="op-exp-title" id="op-e3-title">Business Continuity Specialist</div>
+                        <div class="op-exp-title" id="op-e3-title">Business Continuity Expert</div>
                         <div class="op-exp-company">Econt Express &nbsp;·&nbsp; Ruse</div>
                     </div>
                     <span class="op-exp-period" id="op-e3-period">Jan 2022 – Jul 2022</span>
@@ -1144,19 +1151,19 @@
                     <div class="op-cert-img-wrap"><img src="images/professional-data-engineer-certification.png" alt="Data Engineer"></div>
                     <div class="op-edu-period">Google Cloud</div>
                     <div class="op-edu-degree">Professional Data Engineer</div>
-                    <div class="op-edu-note">Design, build, and operationalize data pipelines, warehouses, and ML-ready datasets on GCP.</div>
+                    <div class="op-edu-note">Design, build, and operationalize data processing systems, pipelines, and ML-ready datasets on Google Cloud.</div>
                 </a>
                 <a href="https://www.credly.com/badges/0f6e8fbd-c744-4722-aec7-1845e0884a45/public_url" target="_blank" rel="noopener" class="op-edu-item op-cert-card-link">
                     <div class="op-cert-img-wrap"><img src="images/professional-machine-learning-engineer-certificatio.png" alt="ML Engineer"></div>
                     <div class="op-edu-period">Google Cloud</div>
                     <div class="op-edu-degree">Professional ML Engineer</div>
-                    <div class="op-edu-note">Architect, train, and deploy ML models and MLOps pipelines using Vertex AI.</div>
+                    <div class="op-edu-note">Architect, train, and deploy ML models and MLOps pipelines using Vertex AI on Google Cloud.</div>
                 </a>
                 <a href="https://www.credly.com/badges/a2590a10-3a72-4b32-a5f7-131abd3aa8bc/public_url" target="_blank" rel="noopener" class="op-edu-item op-cert-card-link">
                     <div class="op-cert-img-wrap"><img src="images/professional-cloud-developer-certification.png" alt="Cloud Developer"></div>
                     <div class="op-edu-period">Google Cloud</div>
                     <div class="op-edu-degree">Professional Cloud Developer</div>
-                    <div class="op-edu-note">Build scalable, secure, cloud-native apps using Google Cloud tools and APIs.</div>
+                    <div class="op-edu-note">Build scalable, secure, cloud-native applications using Google Cloud services, tools, and APIs.</div>
                 </a>
             </div>
         </div>
@@ -1203,17 +1210,17 @@ document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
 const OP_CONTENT = {
     en: {
         back: "Back to site", label: "CV", print: "Save as PDF",
-        name: "Elisey Yordanov", jobtitle: "Data Engineer & Software Developer", location: "Ruse, Bulgaria",
+        name: "Elisey Yordanov", jobtitle: "Senior Data Engineer", location: "Ruse, Bulgaria",
         contactTitle: "Contact", skillsTitle: "Skills", certsTitle: "Certifications", awardsTitle: "Awards",
         sk1: "Data Engineering", sk2: "Cloud", sk3: "AI / ML", sk4: "Programming", sk5: "Security",
         award1: "John Atanasov Award - Best Technical Student (2021)",
         award2: "Ministry of Education Award - Top Graduate, IT Career Program (2021)",
         summaryTitle: "Professional Summary",
-        summary: "Data Engineer and Software Developer with 5+ years of experience building data pipelines, AI/ML systems, cloud infrastructure, and security solutions. Started at Econt Express at age 17, progressing from intern to Information Security Specialist. Currently at IT Partner Ltd - the company powering Econt's entire IT ecosystem - delivering complex data, AI, and infrastructure projects at enterprise scale. Holder of 3 Google Cloud Professional certifications.",
+        summary: "Data Engineer and Software Developer with 5+ years of experience building data pipelines, AI/ML systems, cloud infrastructure, and security solutions. Started at Econt Express at age 17, progressing from intern to Information Security Expert. Currently at IT Partner Ltd - the company powering Econt's entire IT ecosystem - delivering complex data, AI, and infrastructure projects at enterprise scale. Holder of 3 Google Cloud Professional certifications.",
         expTitle: "Experience",
-        e1Title: "Software Developer",      e1Period: "Feb 2023 – Present",
-        e2Title: "Information Security Specialist", e2Period: "Jul 2022 – Feb 2023",
-        e3Title: "Business Continuity Specialist",  e3Period: "Jan 2022 – Jul 2022",
+        e1Title: "Senior Data Engineer",     e1Period: "Feb 2023 – Present",
+        e2Title: "Information Security Expert", e2Period: "Jul 2022 – Feb 2023",
+        e3Title: "Business Continuity Expert",  e3Period: "Jan 2022 – Jul 2022",
         e4Title: "Junior Data Engineer",    e4Period: "Jul 2020 – Jan 2022",
         e1b: ["Real-Time BigQuery DWH with CDC - streaming all Econt operational databases at petabyte scale",
               "VisionAI: in-house YOLOv8 training platform, PTZ camera automation, hybrid LPR, Deepstream on NVIDIA GPUs",
@@ -1243,17 +1250,17 @@ const OP_CONTENT = {
     },
     bg: {
         back: "Обратно", label: "CV", print: "Запази като PDF",
-        name: "Елисей Йорданов", jobtitle: "Data Engineer и Разработчик", location: "Русе, България",
+        name: "Елисей Йорданов", jobtitle: "Senior Data Engineer", location: "Русе, България",
         contactTitle: "Контакти", skillsTitle: "Умения", certsTitle: "Сертификати", awardsTitle: "Награди",
         sk1: "Data Engineering", sk2: "Cloud", sk3: "AI / ML", sk4: "Програмиране", sk5: "Сигурност",
         award1: "Награда Джон Атанасов - Най-добър технически ученик (2021)",
         award2: "Награда МОН - Отличник на програма ИТ Кариера (2021)",
         summaryTitle: "Профил",
-        summary: "Data Engineer и Разработчик с 5+ години опит в изграждане на data pipelines, AI/ML системи, облачна инфраструктура и решения за сигурност. Започнах в Еконт Експрес на 17 години, израствайки от стажант до Специалист информационна сигурност. В момента в Ай Ти Партньор ЕООД - компанията, поддържаща цялата ИТ екосистема на Еконт - реализирайки сложни data, AI и инфраструктурни проекти. Притежавам 3 Google Cloud Professional сертификата.",
+        summary: "Data Engineer и Software Developer с 5+ години опит в изграждане на data pipelines, AI/ML системи, облачна инфраструктура и решения за сигурност. Започнах в Еконт Експрес на 17 години, израствайки от стажант до Специалист информационна сигурност. В момента в Ай Ти Партньор ЕООД - компанията, поддържаща цялата ИТ екосистема на Еконт - реализирайки сложни data, AI и инфраструктурни проекти. Притежавам 3 Google Cloud Professional сертификата.",
         expTitle: "Трудов стаж",
-        e1Title: "Разработчик на Софтуер",         e1Period: "Февр. 2023 – Настояще",
-        e2Title: "Специалист Информационна Сигурност", e2Period: "Юли 2022 – Февр. 2023",
-        e3Title: "Специалист Непрекъснатост",       e3Period: "Ян. 2022 – Юли 2022",
+        e1Title: "Senior Data Engineer",              e1Period: "Февр. 2023 – Настояще",
+        e2Title: "Information Security Expert",   e2Period: "Юли 2022 – Февр. 2023",
+        e3Title: "Business Continuity Expert",    e3Period: "Ян. 2022 – Юли 2022",
         e4Title: "Junior Data Engineer",             e4Period: "Юли 2020 – Ян. 2022",
         e1b: ["Real-Time BigQuery DWH с CDC - поточна обработка на всички бази данни на Еконт в петабайтов мащаб",
               "VisionAI: In-House платформа за трениране на YOLOv8, PTZ автоматизация, хибриден LPR, Deepstream на NVIDIA",
@@ -1362,6 +1369,16 @@ const btt = document.getElementById('back-to-top');
 if (btt) {
     window.addEventListener('scroll', () => btt.classList.toggle('visible', window.scrollY > 300));
     btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
+
+/* ── Print with dynamic filename (lang + theme) ── */
+function opPrintCV() {
+    const lang  = localStorage.getItem('ey-lang') || 'en';
+    const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+    const orig  = document.title;
+    document.title = `CV - Elisey Yordanov - ${lang.toUpperCase()} - ${theme === 'dark' ? 'Dark' : 'Light'}`;
+    window.addEventListener('afterprint', () => { document.title = orig; }, { once: true });
+    window.print();
 }
 </script>
 

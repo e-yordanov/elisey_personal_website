@@ -1,6 +1,6 @@
 /**
- * Elisey Yordanov — Personal Portfolio
- * script.js — Main JavaScript
+ * Elisey Yordanov - Personal Portfolio
+ * script.js - Main JavaScript
  */
 
 'use strict';
@@ -129,6 +129,7 @@ class LanguageManager {
                 <p>${t.p1}</p>
                 <p>${t.p2}</p>
                 <p>${t.p3}</p>
+                ${t.p4 ? `<p>${t.p4}</p>` : ''}
             </div>
             <div class="about-extras" data-aos="fade-left">
                 <div class="about-card about-certs-card">

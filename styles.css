@@ -1,6 +1,6 @@
 /* ============================================================
-   Elisey Yordanov — Personal Portfolio
-   styles.css — Main Stylesheet
+   Elisey Yordanov - Personal Portfolio
+   styles.css - Main Stylesheet
    ============================================================ */
 
 /* ── Google Fonts import handled in HTML ── */
@@ -22,7 +22,7 @@
     /* Gradients */
     --grad-hero:    linear-gradient(135deg, #0f0a1e 0%, #1a0836 50%, #0d1117 100%);
     --grad-primary: linear-gradient(135deg, var(--clr-primary-dark), var(--clr-indigo));
-    /* Light theme — rich, saturated so text is readable on white */
+    /* Light theme - rich, saturated so text is readable on white */
     --grad-text:    linear-gradient(135deg, #6d28d9, #7c3aed, #0e7490);
 
     /* Light Theme */
@@ -81,7 +81,7 @@
     --shadow-lg:  0 8px 40px rgba(0,0,0,0.6);
     --shadow-xl:  0 16px 60px rgba(0,0,0,0.7);
     --glow:       0 0 40px rgba(139,92,246,0.5);
-    /* Dark theme — soft pastels look great on dark backgrounds */
+    /* Dark theme - soft pastels look great on dark backgrounds */
     --grad-text:  linear-gradient(135deg, #c4b5fd, #f0abfc, #a5f3fc);
 }
 
@@ -742,9 +742,8 @@ input, textarea { font-family: inherit; }
 .award-list { display: flex; flex-direction: column; gap: 0.6rem; }
 
 .edu-awards {
-    margin-top: 1rem;
+    margin-top: 0.85rem;
     padding-top: 0.85rem;
-    border-top: 1px solid var(--border);
 }
 
 /* Certifications card inside About section */

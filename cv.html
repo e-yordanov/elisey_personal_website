@@ -57,7 +57,7 @@
             </span>
             <div class="cv-actions">
                 <a href="cv-onepage.html" style="font-size:0.8rem;color:var(--text-muted);transition:color 0.2s;" id="cv-onepage-link">→ One-page version</a>
-                <button onclick="window.print()" class="cv-print-btn">
+                <button onclick="cvPrint()" class="cv-print-btn">
                     <i class="fas fa-print"></i>
                     <span id="cv-print-btn-text">Print / Save as PDF</span>
                 </button>
@@ -76,7 +76,7 @@
         <img src="images/me.png" alt="Elisey Yordanov" class="cv-avatar">
         <div>
             <h1 id="cv-name" class="cv-name">Elisey Yordanov</h1>
-            <p id="cv-job-title" class="cv-job-title">Data Engineer &amp; Software Developer</p>
+            <p id="cv-job-title" class="cv-job-title">Senior Data Engineer</p>
             <div class="cv-meta">
                 <span class="cv-meta-item">
                     <i class="fas fa-map-marker-alt"></i>
@@ -132,7 +132,7 @@
         <div class="cv-exp-item">
             <div class="cv-exp-header">
                 <div>
-                    <div class="cv-exp-title" id="cv-exp1-title">Software Developer</div>
+                    <div class="cv-exp-title" id="cv-exp1-title">Senior Data Engineer</div>
                     <div class="cv-exp-company">IT Partner Ltd &nbsp;·&nbsp; Shumen / Remote, Bulgaria</div>
                 </div>
                 <span class="cv-exp-period" id="cv-exp1-period">Feb 2023 – Present</span>
@@ -243,6 +243,7 @@
                 <i class="fas fa-external-link-alt" style="font-size:0.65rem;"></i> View all on Credly
             </a>
         </h2>
+        <p id="cv-certs-intro" style="font-size:0.82rem;color:var(--text-secondary);margin-bottom:0.9rem;line-height:1.6;">Professional certifications issued by Google Cloud, validating advanced expertise across data engineering, machine learning, and cloud-native development - each requiring hands-on GCP experience at a professional level.</p>
         <div class="cv-certs-pro-grid">
             <a href="https://www.credly.com/badges/b7700dd5-9a0b-45b9-b768-ff3de6742d8f/public_url" target="_blank" rel="noopener" class="cv-cert-pro-card">
                 <img src="images/professional-data-engineer-certification.png" alt="Professional Data Engineer" class="cv-cert-pro-img">
@@ -462,7 +463,8 @@ const CV_CONTENT = {
         eduTitle: "Education",
         skillsTitle: "Technical Skills",
         certsTitle: "Certifications",
-        exp1Title: "Software Developer",
+        certsIntro: "Professional certifications issued by Google Cloud, validating advanced expertise across data engineering, machine learning, and cloud-native development - each requiring hands-on GCP experience at a professional level.",
+        exp1Title: "Senior Data Engineer",
         exp1Period: "Feb 2023 – Present",
         exp1Desc: "The technology company that built and maintains the entire Econt IT ecosystem. Leading and contributing to high-priority data engineering, AI/ML, and infrastructure projects.",
         exp2Title: "Information Security Specialist",
@@ -480,7 +482,7 @@ const CV_CONTENT = {
         edu2Title: "Hristo Botev High School, Ruse",
         edu2Major: "Technical Track - Information Technology",
         edu2Note: "John Atanasov Award - best technical student at graduation · GPA ~5.30/6.00",
-        jobTitle: "Data Engineer & Software Developer",
+        jobTitle: "Senior Data Engineer",
         location: "Ruse, Bulgaria"
     },
     bg: {
@@ -488,18 +490,19 @@ const CV_CONTENT = {
         label: "Автобиография",
         printBtn: "Принтирай / Запази като PDF",
         summaryTitle: "Профил",
-        summary: "Data Engineer и Разработчик с 5+ години опит в изграждане на data pipelines, AI/ML системи, облачна инфраструктура и решения за сигурност. Започнах кариерата си на 17 години в Еконт Експрес (най-голямата куриерска компания в България), преминавайки от data engineering до информационна сигурност. В момента в Ай Ти Партньор ЕООД, реализирайки сложни data и AI проекти в корпоративен мащаб. Притежавам 3 Google Cloud Professional сертификата.",
+        summary: "Data Engineer и Software Developer с 5+ години опит в изграждане на data pipelines, AI/ML системи, облачна инфраструктура и решения за сигурност. Започнах кариерата си на 17 години в Еконт Експрес (най-голямата куриерска компания в България), преминавайки от data engineering до информационна сигурност. В момента в Ай Ти Партньор ЕООД, реализирайки сложни data и AI проекти в корпоративен мащаб. Притежавам 3 Google Cloud Professional сертификата.",
         expTitle: "Трудов стаж",
         eduTitle: "Образование",
         skillsTitle: "Технически умения",
         certsTitle: "Сертификати",
-        exp1Title: "Разработчик на Софтуер",
+        certsIntro: "Професионални сертификати от Google Cloud, удостоверяващи напреднала експертиза в data engineering, машинно обучение и разработка в облака - всеки изисква практически опит с GCP на professional ниво.",
+        exp1Title: "Senior Data Engineer",
         exp1Period: "Февр. 2023 – Настояще",
         exp1Desc: "Технологичната компания изградила и поддържаща цялата ИТ екосистема на Еконт. Ръководя и участвам в приоритетни data engineering, AI/ML и инфраструктурни проекти.",
-        exp2Title: "Специалист Информационна Сигурност",
+        exp2Title: "Information Security Expert",
         exp2Period: "Юли 2022 – Февр. 2023",
         exp2Desc: "Повишен в Информационна сигурност. Следях пробиви, провеждах penetration тестове и участвах като съавтор в проектирането на защитни системи за най-голямата куриерска фирма в България.",
-        exp3Title: "Специалист Непрекъснатост на Бизнеса",
+        exp3Title: "Business Continuity Expert",
         exp3Period: "Ян. 2022 – Юли 2022",
         exp3Desc: "Ключов технически експерт в екипа за непрекъснатост; Продуктов собственик на два корпоративни продукта за мониторинг. Предоставях и спешна техническа поддръжка на ИТ екипа.",
         exp4Title: "Junior Data Engineer",
@@ -511,7 +514,7 @@ const CV_CONTENT = {
         edu2Title: "СУ Христо Ботев, Русе",
         edu2Major: "Технически профил - Информационни технологии",
         edu2Note: "Награда Джон Атанасов - най-добър технически ученик · Успех ~5.30/6.00",
-        jobTitle: "Data Engineer и Разработчик",
+        jobTitle: "Senior Data Engineer",
         location: "Русе, България"
     }
 };
@@ -532,6 +535,7 @@ function applyCVLang(lang) {
     document.getElementById('cv-edu-title').textContent        = c.eduTitle;
     document.getElementById('cv-skills-title').textContent     = c.skillsTitle;
     document.getElementById('cv-certs-title').textContent      = c.certsTitle;
+    document.getElementById('cv-certs-intro').textContent      = c.certsIntro;
     document.getElementById('cv-job-title').textContent        = c.jobTitle;
     document.getElementById('cv-location').textContent         = c.location;
 
@@ -598,6 +602,16 @@ document.querySelectorAll('[data-lang-btn]').forEach(btn => {
         applyCVLang(l);
     });
 });
+
+// Print with dynamic filename (lang + theme)
+function cvPrint() {
+    const lang  = localStorage.getItem('ey-lang') || 'en';
+    const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+    const orig  = document.title;
+    document.title = `CV - Elisey Yordanov - ${lang.toUpperCase()} - ${theme === 'dark' ? 'Dark' : 'Light'}`;
+    window.addEventListener('afterprint', () => { document.title = orig; }, { once: true });
+    window.print();
+}
 
 // Back to top
 const btt = document.getElementById('back-to-top');

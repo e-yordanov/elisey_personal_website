@@ -82,9 +82,10 @@ const translations = {
         about: {
             sectionTitle: "About Me",
             sectionSubtitle: "A bit about who I am and what drives me",
-            p1: "I'm a 23-year-old Data Engineer and Software Developer from Ruse, Bulgaria. At 17, I started my IT career at Econt Express - Bulgaria's largest courier company - where I progressed from intern to Information Security Specialist in just two years.",
-            p2: "In 2023, I joined IT Partner Ltd - the company that built and maintains Econt's entire technology ecosystem. There I work on some of Bulgaria's most complex data engineering, AI/ML, and infrastructure projects at scale.",
-            p3: "I'm passionate about building systems that solve real business problems. I hold three Google Cloud Professional certifications and I'm always looking for the next challenge.",
+            p1: "I'm a 23-year-old Data Engineer and Software Developer from Ruse, Bulgaria. At 17, I started my IT career at Econt Express - Bulgaria's largest courier company - where I grew from an intern to an Information Security Specialist in just two years, owning enterprise monitoring products and conducting penetration tests along the way.",
+            p2: "In 2023, I joined IT Partner Ltd - the company that built and maintains Econt's entire technology ecosystem. I work on some of Bulgaria's most complex data and AI projects: a petabyte-scale real-time data warehouse on BigQuery with CDC, VisionAI (an in-house computer vision platform for truck monitoring using YOLOv8 and Deepstream on NVIDIA GPUs), Talk2SQL (a natural language to SQL chatbot over the live enterprise DWH), and a suite of logistics capacity analytics systems used daily by management.",
+            p3: "I hold three Google Cloud Professional certifications - Data Engineer, ML Engineer, and Cloud Developer - and I regularly share what I learn by speaking at tech conferences. I've given talks on AI in Software Development, Vector Search & RAG, and Generative AI Agents at events like Ruse Conf, Plovdiv Conf, and BEST.",
+            p4: "Outside of work, I co-host Logos Circle Ruse - a community of curious minds exploring ideas across technology, philosophy, and society. I support student competitions by participating as a mentor and jury member, and I'm involved in various volunteering initiatives in my hometown.",
             educationTitle: "Education & Training",
             edu: [
                 {
@@ -182,7 +183,7 @@ const translations = {
             items: [
                 {
                     period: "Feb 2023 – Present",
-                    title: "Software Developer",
+                    title: "Senior Data Engineer",
                     company: "IT Partner Ltd",
                     location: "Shumen / Remote, Bulgaria",
                     current: true,
@@ -371,7 +372,7 @@ const translations = {
         hero: {
             greeting: "Здравейте, аз съм",
             name: "Елисей Йорданов",
-            typed: ["Data Engineer", "Разработчик", "Cloud Developer", "ML Engineer", "Cloud Архитект", "AI Ентусиаст"],
+            typed: ["Data Engineer", "Software Developer", "Cloud Developer", "ML Engineer", "Cloud Architect", "AI Enthusiast"],
             subtitle: "Изграждам интелигентни системи за данни, AI решения и облачна инфраструктура.",
             cta1: "Вижте работата ми",
             cta2: "Свържете се",
@@ -386,9 +387,10 @@ const translations = {
         about: {
             sectionTitle: "За мен",
             sectionSubtitle: "Малко за това кой съм и какво ме вдъхновява",
-            p1: "Аз съм 23-годишен Data Engineer и Разработчик от Русе, България. На 17 години започнах IT кариерата си в Еконт Експрес - най-голямата куриерска компания в България - където за две години се издигнах от стажант до Специалист информационна сигурност.",
-            p2: "През 2023 се присъединих към Ай Ти Партньор ЕООД - компанията изградила и поддържаща цялата технологична екосистема на Еконт. Там работя по едни от най-сложните data engineering, AI/ML и инфраструктурни проекти в България.",
-            p3: "Страстен съм към изграждането на системи, решаващи реални бизнес проблеми. Притежавам три Google Cloud Professional сертификата и непрестанно търся следващото предизвикателство.",
+            p1: "Аз съм 23-годишен Data Engineer и Software Developer от Русе, България. На 17 години започнах IT кариерата си в Еконт Експрес - най-голямата куриерска компания в България - където за две години се издигнах от стажант до Специалист информационна сигурност, управлявайки enterprise мониторинг продукти и провеждайки penetration тестове.",
+            p2: "През 2023 се присъединих към Ай Ти Партньор ЕООД - компанията изградила и поддържаща цялата технологична екосистема на Еконт. Работя по едни от най-сложните data и AI проекти в България: хранилище за данни с петабайтов мащаб в реално време (BigQuery + CDC), VisionAI (платформа за компютърно зрение за мониторинг на камиони с YOLOv8 и Deepstream на NVIDIA), Talk2SQL (чатбот преобразуващ естествен език в SQL върху целия DWH) и набор от системи за капацитетна аналитика, използвани ежедневно от ръководството.",
+            p3: "Притежавам три Google Cloud Professional сертификата - Data Engineer, ML Engineer и Cloud Developer - и редовно споделям наученото чрез участия в технически конференции. Изнасял съм презентации на теми като AI в разработката на софтуер, Vector Search & RAG и Generative AI Agents на Ruse Conf, Plovdiv Conf и BEST.",
+            p4: "Извън работата съм co-host на Logos Circle Ruse - общност от любознателни хора, изследващи идеи в сферите на технологиите, философията и обществото. Подкрепям ученически състезания като ментор и член на журито, и участвам в различни доброволчески инициативи в родния ми град.",
             educationTitle: "Образование",
             edu: [
                 {
@@ -486,7 +488,7 @@ const translations = {
             items: [
                 {
                     period: "Февр. 2023 – Настояще",
-                    title: "Разработчик на Софтуер",
+                    title: "Senior Data Engineer",
                     company: "Ай Ти Партньор ЕООД",
                     location: "Шумен / Remote, България",
                     current: true,
@@ -503,7 +505,7 @@ const translations = {
                 },
                 {
                     period: "Юли 2022 – Февр. 2023",
-                    title: "Специалист Информационна Сигурност",
+                    title: "Information Security Expert",
                     company: "Еконт Експрес",
                     location: "Русе, България",
                     current: false,
@@ -519,7 +521,7 @@ const translations = {
                 },
                 {
                     period: "Ян. 2022 – Юли 2022",
-                    title: "Специалист Непрекъснатост на Бизнеса",
+                    title: "Business Continuity Expert",
                     company: "Еконт Експрес",
                     location: "Русе, България",
                     current: false,
