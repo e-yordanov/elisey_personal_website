@@ -9,8 +9,7 @@ Built as a static site deployable to **GitHub Pages** with a custom domain via *
 
 | URL                   | Notes                          |
 |-----------------------|-------------------------------|
-| `https://<username>.github.io` | GitHub Pages default URL |
-| `https://elisey.dev` (example) | Custom domain via Cloudflare |
+| `https://e-yordanov.github.io/elisey_personal_website/index.html` | GitHub Pages default URL |
 
 ---
 
