@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Elisey Yordanov — CV. Data Engineer &amp; Software Developer.">
-    <title>CV — Elisey Yordanov</title>
+    <meta name="description" content="Elisey Yordanov - CV. Data Engineer &amp; Software Developer.">
+    <title>CV - Elisey Yordanov</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="images/ico.png" type="image/png"><!-- fallback -->
 
@@ -127,7 +127,7 @@
             border-right-color: rgba(139,92,246,0.15);
         }
 
-        /* ── Sidebar text: dark theme — light on dark background ── */
+        /* ── Sidebar text: dark theme - light on dark background ── */
         .op-sidebar .op-jobtitle                          { color: #b8a8f0; }
         .op-sidebar .op-s-heading                         { color: #c4b5fd; border-bottom-color: rgba(196,181,253,0.25); }
         .op-sidebar .op-contact-item                      { color: #d4ccee; }
@@ -140,9 +140,13 @@
         .op-sidebar .op-cert-item a                       { color: #c4b5fd; }
         .op-sidebar .op-award-item                        { color: #d4ccee; }
         .op-sidebar .op-lang-item                         { color: #d4ccee; }
+        .op-sidebar .op-edu-s-degree                      { color: #e2dbf7; }
+        .op-sidebar .op-edu-s-period                      { color: #a78bfa; }
+        .op-sidebar .op-edu-s-note                        { color: #a78bfa; }
+        .op-sidebar .op-edu-s-item                        { border-left-color: #7c3aed; border-color: rgba(167,139,250,0.2); background: rgba(167,139,250,0.07); }
         .op-sidebar .op-lang-level                        { color: #a78bfa; background: rgba(167,139,250,0.15); border-color: rgba(167,139,250,0.28); }
 
-        /* ── Sidebar text: light theme — dark on light background ── */
+        /* ── Sidebar text: light theme - dark on light background ── */
         [data-theme="light"] .op-sidebar .op-jobtitle              { color: #6d28d9; }
         [data-theme="light"] .op-sidebar .op-s-heading             { color: #4c1d95; border-bottom-color: rgba(109,40,217,0.22); }
         [data-theme="light"] .op-sidebar .op-contact-item          { color: #3b0764; }
@@ -155,6 +159,10 @@
         [data-theme="light"] .op-sidebar .op-cert-item a           { color: #5b21b6; }
         [data-theme="light"] .op-sidebar .op-award-item            { color: #3b0764; }
         [data-theme="light"] .op-sidebar .op-lang-item             { color: #3b0764; }
+        [data-theme="light"] .op-sidebar .op-edu-s-degree          { color: #1e0553; }
+        [data-theme="light"] .op-sidebar .op-edu-s-period          { color: #6d28d9; }
+        [data-theme="light"] .op-sidebar .op-edu-s-note            { color: #6d28d9; }
+        [data-theme="light"] .op-sidebar .op-edu-s-item            { border-left-color: #7c3aed; border-color: rgba(109,40,217,0.2); background: rgba(109,40,217,0.05); }
         [data-theme="light"] .op-sidebar .op-lang-level            { color: #6d28d9; background: rgba(109,40,217,0.1); border-color: rgba(109,40,217,0.25); }
 
         /* Photo + name block */
@@ -178,14 +186,14 @@
             font-family: 'Space Grotesk', sans-serif;
             font-size: 1.05rem;
             font-weight: 800;
-            /* Default (dark theme) — light pastels on dark sidebar */
+            /* Default (dark theme) - light pastels on dark sidebar */
             background: linear-gradient(135deg, #c4b5fd, #f0abfc, #a5f3fc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             line-height: 1.2;
         }
-        /* Light theme — darker gradient visible on light sidebar */
+        /* Light theme - darker gradient visible on light sidebar */
         [data-theme="light"] .op-name {
             background: linear-gradient(135deg, #6d28d9, #7c3aed, #0e7490);
             -webkit-background-clip: text;
@@ -321,8 +329,8 @@
             border: 1px solid rgba(139,92,246,0.18);
         }
 
-        /* Sidebar bottom — screen: normal flow; print: pushed to bottom */
-        #op-sidebar-bottom { display: flex; flex-direction: column; gap: 0.75rem; margin-top: auto; }
+        /* Sidebar bottom - screen: normal flow; print: pushed to bottom */
+        #op-sidebar-bottom { display: flex; flex-direction: column; gap: 0.75rem; }
 
         /* ── RIGHT MAIN ── */
         .op-main {
@@ -424,12 +432,82 @@
             border: 1px solid rgba(139,92,246,0.12);
         }
 
-        /* Education */
+        /* Education stacked (sidebar) */
+        .op-edu-stacked { display: flex; flex-direction: column; gap: 0.55rem; }
+        .op-edu-s-item {
+            padding: 0.5rem 0.6rem;
+            background: rgba(139,92,246,0.04);
+            border: 1px solid rgba(139,92,246,0.12);
+            border-left: 2px solid var(--clr-primary);
+            border-radius: 5px;
+        }
+        .op-edu-s-period {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--clr-primary);
+            font-weight: 600;
+            margin-bottom: 0.15rem;
+        }
+        .op-edu-s-degree {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--text);
+            line-height: 1.3;
+            margin-bottom: 0.1rem;
+        }
+        .op-edu-s-note {
+            font-size: 0.62rem;
+            color: var(--clr-primary-light);
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        /* Education grid (kept for reference, unused in onepage now) */
         .op-edu-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0.75rem;
         }
+        .op-edu-grid--3 { grid-template-columns: 1fr 1fr 1fr; }
+
+        /* Credly link in cert heading */
+        .op-certs-credly {
+            margin-left: auto;
+            font-size: 0.6rem;
+            font-weight: 600;
+            color: var(--clr-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            opacity: 0.75;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+        .op-certs-credly:hover { opacity: 1; text-decoration: underline; }
+
+        /* Badge image inside cert card */
+        .op-cert-img-wrap {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0.35rem;
+        }
+        .op-cert-img-wrap img {
+            width: 2.5rem;
+            height: 2.5rem;
+            object-fit: contain;
+        }
+        .op-cert-card-link {
+            text-decoration: none;
+            display: block;
+            transition: box-shadow 0.18s, transform 0.15s;
+            border-top: 2px solid var(--clr-primary) !important;
+        }
+        .op-cert-card-link:hover {
+            box-shadow: 0 3px 14px rgba(139,92,246,0.18);
+            transform: translateY(-2px);
+        }
+
         .op-edu-item {
             background: rgba(139,92,246,0.04);
             border: 1px solid rgba(139,92,246,0.12);
@@ -530,7 +608,6 @@
             [data-theme="dark"] .op-edu-major  { color: #b8aed4 !important; }
             [data-theme="dark"] .op-edu-note   { color: #a78bfa !important; }
             [data-theme="dark"] #op-pres-list > div { border-bottom-color: rgba(139,92,246,0.2) !important; }
-            [data-theme="dark"] #op-sidebar-bottom { border-top-color: rgba(139,92,246,0.2) !important; }
 
             /* Edge-to-edge: sidebar purple/main white go to paper border */
             .op-page {
@@ -584,7 +661,7 @@
                 line-height: 1.2 !important;
                 background: none !important;
                 -webkit-text-fill-color: #4c1d95 !important;
-                color: #4c1d95 !important;   /* light theme default — dark overridden above */
+                color: #4c1d95 !important;   /* light theme default - dark overridden above */
             }
             .op-jobtitle {
                 font-size: 10px !important;
@@ -654,9 +731,7 @@
                 padding: 1px 5px !important;
             }
 
-            /* Certs + Awards pinned to bottom of sidebar */
             #op-sidebar-bottom {
-                margin-top: auto !important;
                 display: flex !important;
                 flex-direction: column !important;
                 gap: 10px !important;
@@ -664,8 +739,8 @@
 
             /* ─ Main ─ */
             .op-main {
-                padding: 22px 18px 16px !important;
-                gap: 14px !important;
+                padding: 20px 16px 14px !important;
+                gap: 11px !important;
                 display: flex !important;
                 flex-direction: column !important;
                 justify-content: flex-start !important;
@@ -722,7 +797,25 @@
 
             .op-exp-tags { display: none !important; }
 
+            /* Education in sidebar */
             .op-edu-grid { gap: 6px !important; }
+            .op-edu-stacked { gap: 4px !important; }
+            .op-edu-s-item { padding: 4px 6px !important; background: rgba(167,139,250,0.12) !important; border-color: rgba(167,139,250,0.3) !important; }
+            .op-sidebar .op-edu-s-period,
+            .op-edu-s-period { font-size: 7px !important; color: #c4b5fd !important; }
+            .op-sidebar .op-edu-s-degree,
+            .op-edu-s-degree { font-size: 8.5px !important; color: #e2dbf7 !important; }
+            .op-sidebar .op-edu-s-note,
+            .op-edu-s-note { font-size: 7px !important; color: #a78bfa !important; }
+
+            /* Certifications in main */
+            .op-edu-grid--3 { grid-template-columns: 1fr 1fr 1fr !important; gap: 5px !important; }
+            .op-cert-img-wrap img { width: 26px !important; height: 26px !important; }
+            .op-cert-img-wrap { margin-bottom: 2px !important; }
+            .op-cert-card-link { border-top-width: 1.5px !important; padding: 6px 7px !important; }
+            .op-certs-credly { display: none !important; }
+            /* Hide cert descriptions in print - saves ~2 lines per card */
+            .op-cert-card-link .op-edu-note { display: none !important; }
             .op-edu-item {
                 padding: 7px 10px !important;
                 background: #faf5ff !important;
@@ -749,6 +842,7 @@
             .op-sheet { grid-template-columns: 1fr; }
             .op-sidebar { border-right: none; border-bottom: 1px solid rgba(139,92,246,0.2); }
             .op-edu-grid { grid-template-columns: 1fr; }
+            .op-edu-grid--3 { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -897,70 +991,43 @@
                 </div>
                 <div class="op-lang-item">
                     <span id="op-lang2">English</span>
-                    <span class="op-lang-level" id="op-lang2-level">Professional</span>
+                    <span class="op-lang-level" id="op-lang2-level">C1</span>
                 </div>
             </div>
         </div>
 
-        <!-- Certifications + Awards pinned to bottom -->
-        <div id="op-sidebar-bottom">
-
-            <div>
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;">
-                    <div class="op-s-heading" id="op-certs-title" style="margin-bottom:0;">Certifications</div>
-                    <a href="https://www.credly.com/users/elisey-yordanov/badges#credly" target="_blank" rel="noopener"
-                       style="font-size:0.55rem;color:var(--clr-primary);text-decoration:none;display:flex;align-items:center;gap:2px;font-weight:600;opacity:0.85;">
-                        <i class="fas fa-external-link-alt" style="font-size:0.5rem;"></i> Credly
-                    </a>
+        <!-- Education -->
+        <div>
+            <div class="op-s-heading" id="op-edu-title">Education</div>
+            <div class="op-edu-stacked">
+                <div class="op-edu-s-item">
+                    <div class="op-edu-s-period">2019 – 2021</div>
+                    <div class="op-edu-s-degree" id="op-edu1-deg">IT Career - National Program</div>
+                    <div class="op-edu-s-note" id="op-edu1-note">Honors (5.50/6.00) · Minister of Education Award</div>
                 </div>
-                <div class="op-cert-list">
-                    <div class="op-cert-item">
-                        <i class="fas fa-award"></i>
-                        <a href="https://www.credly.com/badges/b7700dd5-9a0b-45b9-b768-ff3de6742d8f/public_url" target="_blank" rel="noopener">
-                            GCP Professional Data Engineer ↗
-                        </a>
-                    </div>
-                    <div class="op-cert-item">
-                        <i class="fas fa-award"></i>
-                        <a href="https://www.credly.com/badges/0f6e8fbd-c744-4722-aec7-1845e0884a45/public_url" target="_blank" rel="noopener">
-                            GCP Professional ML Engineer ↗
-                        </a>
-                    </div>
-                    <div class="op-cert-item">
-                        <i class="fas fa-award"></i>
-                        <a href="https://www.credly.com/badges/a2590a10-3a72-4b32-a5f7-131abd3aa8bc/public_url" target="_blank" rel="noopener">
-                            GCP Professional Cloud Developer ↗
-                        </a>
-                    </div>
-                    <div class="op-cert-item badge-type">
-                        <i class="fas fa-star"></i>
-                        <a href="https://www.credly.com/badges/8572a53e-c75d-4762-987f-10e1146c54e0/public_url" target="_blank" rel="noopener">
-                            GCP Build &amp; Deploy Generative AI ↗
-                        </a>
-                    </div>
-                    <div class="op-cert-item badge-type">
-                        <i class="fas fa-star"></i>
-                        <a href="https://www.credly.com/badges/239ba763-40c4-4713-9a35-e1727d964757/public_url" target="_blank" rel="noopener">
-                            GCP Enterprise Search &amp; Conv. AI ↗
-                        </a>
-                    </div>
+                <div class="op-edu-s-item">
+                    <div class="op-edu-s-period">2016 – 2021</div>
+                    <div class="op-edu-s-degree" id="op-edu2-deg">Hristo Botev High School, Ruse</div>
+                    <div class="op-edu-s-note" id="op-edu2-note">John Atanasov Award - best technical student</div>
                 </div>
             </div>
+        </div>
 
+        <!-- Awards pinned to bottom -->
+        <div id="op-sidebar-bottom">
             <div>
                 <div class="op-s-heading" id="op-awards-title">Awards</div>
                 <div class="op-award-list">
                     <div class="op-award-item">
                         <i class="fas fa-trophy"></i>
-                        <span id="op-award1">John Atanasov Award — Best Technical Student (2021)</span>
+                        <span id="op-award1">John Atanasov Award - Best Technical Student (2021)</span>
                     </div>
                     <div class="op-award-item">
                         <i class="fas fa-medal"></i>
-                        <span id="op-award2">Ministry of Education Award — Top Graduate, IT Career Program (2022)</span>
+                        <span id="op-award2">Ministry of Education Award - Top Graduate, IT Career Program (2021)</span>
                     </div>
                 </div>
             </div>
-
         </div><!-- /op-sidebar-bottom -->
 
     </aside>
@@ -974,8 +1041,8 @@
             <p class="op-summary" id="op-summary">
                 Data Engineer and Software Developer with 5+ years of experience building data pipelines, AI/ML systems, cloud
                 infrastructure, and security solutions. Started at Econt Express at age 17, progressing from intern to
-                Information Security Specialist. Currently at IT Partner Ltd — the company powering Econt's entire IT
-                ecosystem — delivering complex data, AI, and infrastructure projects at enterprise scale.
+                Information Security Specialist. Currently at IT Partner Ltd - the company powering Econt's entire IT
+                ecosystem - delivering complex data, AI, and infrastructure projects at enterprise scale.
                 Holder of 3 Google Cloud Professional certifications.
             </p>
         </div>
@@ -993,10 +1060,10 @@
                     <span class="op-exp-period" id="op-e1-period">Feb 2023 – Present</span>
                 </div>
                 <ul class="op-exp-bullets" id="op-e1-bullets">
-                    <li>Real-Time BigQuery DWH with CDC — streaming all operational databases, petabyte-scale analytics</li>
+                    <li>Real-Time BigQuery DWH with CDC - streaming all operational databases, petabyte-scale analytics</li>
                     <li>VisionAI: in-house YOLOv8 training platform, PTZ automation, hybrid LPR, Deepstream on NVIDIA GPUs</li>
-                    <li>Talk2SQL — natural language to BigQuery SQL chatbot operating on the full enterprise DWH</li>
-                    <li>Capacity Analytics Suite (Lines, Zones, Offices) — real-time load monitoring across Econt's logistics network</li>
+                    <li>Talk2SQL - natural language to BigQuery SQL chatbot operating on the full enterprise DWH</li>
+                    <li>Capacity Analytics Suite (Lines, Zones, Offices) - real-time load monitoring across Econt's logistics network</li>
                     <li>AI integrations: invoice analysis, logistics profitability, AI agents for business automation</li>
                     <li>Led IT team migration Econt → IT Partner; authored internal engineering standards</li>
                 </ul>
@@ -1063,22 +1130,34 @@
             </div>
         </div>
 
-        <!-- Education -->
+        <!-- Certifications -->
         <div class="op-m-section">
-            <div class="op-m-heading"><i class="fas fa-graduation-cap"></i> <span id="op-edu-title">Education</span></div>
-            <div class="op-edu-grid">
-                <div class="op-edu-item">
-                    <div class="op-edu-period">2020 – 2022</div>
-                    <div class="op-edu-degree" id="op-edu1-deg">IT Career — National Program</div>
-                    <div class="op-edu-major" id="op-edu1-maj">Backend Developer Pathway</div>
-                    <div class="op-edu-note" id="op-edu1-note">Honors (5.50/6.00) · Minister of Education Award — top graduate</div>
-                </div>
-                <div class="op-edu-item">
-                    <div class="op-edu-period">2016 – 2021</div>
-                    <div class="op-edu-degree" id="op-edu2-deg">SU Hristo Botev, Ruse</div>
-                    <div class="op-edu-major" id="op-edu2-maj">Technical Track — IT</div>
-                    <div class="op-edu-note" id="op-edu2-note">John Atanasov Award — best technical student</div>
-                </div>
+            <div class="op-m-heading">
+                <i class="fas fa-certificate"></i>
+                <span id="op-certs-title">Certifications</span>
+                <a href="https://www.credly.com/users/elisey-yordanov/badges#credly" target="_blank" rel="noopener" class="op-certs-credly">
+                    <i class="fas fa-external-link-alt"></i> Credly
+                </a>
+            </div>
+            <div class="op-edu-grid op-edu-grid--3">
+                <a href="https://www.credly.com/badges/b7700dd5-9a0b-45b9-b768-ff3de6742d8f/public_url" target="_blank" rel="noopener" class="op-edu-item op-cert-card-link">
+                    <div class="op-cert-img-wrap"><img src="images/professional-data-engineer-certification.png" alt="Data Engineer"></div>
+                    <div class="op-edu-period">Google Cloud</div>
+                    <div class="op-edu-degree">Professional Data Engineer</div>
+                    <div class="op-edu-note">Design, build, and operationalize data pipelines, warehouses, and ML-ready datasets on GCP.</div>
+                </a>
+                <a href="https://www.credly.com/badges/0f6e8fbd-c744-4722-aec7-1845e0884a45/public_url" target="_blank" rel="noopener" class="op-edu-item op-cert-card-link">
+                    <div class="op-cert-img-wrap"><img src="images/professional-machine-learning-engineer-certificatio.png" alt="ML Engineer"></div>
+                    <div class="op-edu-period">Google Cloud</div>
+                    <div class="op-edu-degree">Professional ML Engineer</div>
+                    <div class="op-edu-note">Architect, train, and deploy ML models and MLOps pipelines using Vertex AI.</div>
+                </a>
+                <a href="https://www.credly.com/badges/a2590a10-3a72-4b32-a5f7-131abd3aa8bc/public_url" target="_blank" rel="noopener" class="op-edu-item op-cert-card-link">
+                    <div class="op-cert-img-wrap"><img src="images/professional-cloud-developer-certification.png" alt="Cloud Developer"></div>
+                    <div class="op-edu-period">Google Cloud</div>
+                    <div class="op-edu-degree">Professional Cloud Developer</div>
+                    <div class="op-edu-note">Build scalable, secure, cloud-native apps using Google Cloud tools and APIs.</div>
+                </a>
             </div>
         </div>
 
@@ -1127,19 +1206,19 @@ const OP_CONTENT = {
         name: "Elisey Yordanov", jobtitle: "Data Engineer & Software Developer", location: "Ruse, Bulgaria",
         contactTitle: "Contact", skillsTitle: "Skills", certsTitle: "Certifications", awardsTitle: "Awards",
         sk1: "Data Engineering", sk2: "Cloud", sk3: "AI / ML", sk4: "Programming", sk5: "Security",
-        award1: "John Atanasov Award — Best Technical Student (2021)",
-        award2: "Ministry of Education Award — Top Graduate, IT Career Program (2022)",
+        award1: "John Atanasov Award - Best Technical Student (2021)",
+        award2: "Ministry of Education Award - Top Graduate, IT Career Program (2021)",
         summaryTitle: "Professional Summary",
-        summary: "Data Engineer and Software Developer with 5+ years of experience building data pipelines, AI/ML systems, cloud infrastructure, and security solutions. Started at Econt Express at age 17, progressing from intern to Information Security Specialist. Currently at IT Partner Ltd — the company powering Econt's entire IT ecosystem — delivering complex data, AI, and infrastructure projects at enterprise scale. Holder of 3 Google Cloud Professional certifications.",
+        summary: "Data Engineer and Software Developer with 5+ years of experience building data pipelines, AI/ML systems, cloud infrastructure, and security solutions. Started at Econt Express at age 17, progressing from intern to Information Security Specialist. Currently at IT Partner Ltd - the company powering Econt's entire IT ecosystem - delivering complex data, AI, and infrastructure projects at enterprise scale. Holder of 3 Google Cloud Professional certifications.",
         expTitle: "Experience",
         e1Title: "Software Developer",      e1Period: "Feb 2023 – Present",
         e2Title: "Information Security Specialist", e2Period: "Jul 2022 – Feb 2023",
         e3Title: "Business Continuity Specialist",  e3Period: "Jan 2022 – Jul 2022",
         e4Title: "Junior Data Engineer",    e4Period: "Jul 2020 – Jan 2022",
-        e1b: ["Real-Time BigQuery DWH with CDC — streaming all Econt operational databases at petabyte scale",
+        e1b: ["Real-Time BigQuery DWH with CDC - streaming all Econt operational databases at petabyte scale",
               "VisionAI: in-house YOLOv8 training platform, PTZ camera automation, hybrid LPR, Deepstream on NVIDIA GPUs",
-              "Talk2SQL — natural language to BigQuery SQL chatbot running over the full enterprise DWH in real time",
-              "Capacity Analytics Suite (Lines, Zones, Offices) — real-time load monitoring across Econt's logistics network",
+              "Talk2SQL - natural language to BigQuery SQL chatbot running over the full enterprise DWH in real time",
+              "Capacity Analytics Suite (Lines, Zones, Offices) - real-time load monitoring across Econt's logistics network",
               "AI integrations: invoice analysis, logistics profitability calculation, AI agents for business operations",
               "PHP ETL framework migration; CDC pipeline architecture; GCP infrastructure (Cloud Build, Cloud Run, Kubernetes)",
               "Custom integrations with external systems including Interbase data extraction functions",
@@ -1148,38 +1227,38 @@ const OP_CONTENT = {
               "Co-designed comprehensive email security system (DKIM, SPF, PTR, blacklists, anti-phishing logic)",
               "Conducted internal penetration tests; proactively identified and reported vulnerabilities to IT Partner",
               "Security breach monitoring via SIEM and Splunk; authored post-incident security reports",
-              "Product Owner of AppDynamics APM & F5 WAF — managed requirements and vendor relations"],
-        e3b: ["Product Owner of AppDynamics APM & F5 WAF — managed requirements, vendor relations, and rollouts",
+              "Product Owner of AppDynamics APM & F5 WAF - managed requirements and vendor relations"],
+        e3b: ["Product Owner of AppDynamics APM & F5 WAF - managed requirements, vendor relations, and rollouts",
               "System failure root-cause analysis using AppDynamics during high-severity incidents",
               "Technical liaison between business, IT management, and engineering teams during critical events"],
         e4b: ["Built ETL pipelines from Core & secondary systems into the DWH; automated management reports",
               "Delivered dashboards and reports using MySQL, MSSQL, SSIS, SSRS, PowerBI for Econt management",
               "Administered all Econt cloud environments (multi-provider) and GitHub organization",
-              "Early contributor to F5 WAF and AppDynamics projects — foundational for later product ownership"],
+              "Early contributor to F5 WAF and AppDynamics projects - foundational for later product ownership"],
         eduTitle: "Education",
-        edu1Deg: "IT Career — National Program", edu1Maj: "Backend Developer Pathway · SoftUni-based curriculum",
-        edu1Note: "Honors (5.50/6.00) · Minister of Education Award — top graduate",
-        edu2Deg: "SU Hristo Botev, Ruse",              edu2Maj: "Technical Track — IT",
-        edu2Note: "John Atanasov Award — best technical student"
+        edu1Deg: "IT Career - National Program", edu1Maj: "Backend Developer Pathway · SoftUni-based curriculum",
+        edu1Note: "Honors (5.50/6.00) · Minister of Education Award - top graduate",
+        edu2Deg: "Hristo Botev High School, Ruse",      edu2Maj: "Technical Track - IT",
+        edu2Note: "John Atanasov Award - best technical student"
     },
     bg: {
         back: "Обратно", label: "CV", print: "Запази като PDF",
         name: "Елисей Йорданов", jobtitle: "Data Engineer и Разработчик", location: "Русе, България",
         contactTitle: "Контакти", skillsTitle: "Умения", certsTitle: "Сертификати", awardsTitle: "Награди",
         sk1: "Data Engineering", sk2: "Cloud", sk3: "AI / ML", sk4: "Програмиране", sk5: "Сигурност",
-        award1: "Награда Джон Атанасов — Най-добър технически ученик (2021)",
-        award2: "Награда МОН — Отличник на програма ИТ Кариера (2022)",
+        award1: "Награда Джон Атанасов - Най-добър технически ученик (2021)",
+        award2: "Награда МОН - Отличник на програма ИТ Кариера (2021)",
         summaryTitle: "Профил",
-        summary: "Data Engineer и Разработчик с 5+ години опит в изграждане на data pipelines, AI/ML системи, облачна инфраструктура и решения за сигурност. Започнах в Еконт Експрес на 17 години, израствайки от стажант до Специалист информационна сигурност. В момента в Ай Ти Партньор ЕООД — компанията, поддържаща цялата ИТ екосистема на Еконт — реализирайки сложни data, AI и инфраструктурни проекти. Притежавам 3 Google Cloud Professional сертификата.",
+        summary: "Data Engineer и Разработчик с 5+ години опит в изграждане на data pipelines, AI/ML системи, облачна инфраструктура и решения за сигурност. Започнах в Еконт Експрес на 17 години, израствайки от стажант до Специалист информационна сигурност. В момента в Ай Ти Партньор ЕООД - компанията, поддържаща цялата ИТ екосистема на Еконт - реализирайки сложни data, AI и инфраструктурни проекти. Притежавам 3 Google Cloud Professional сертификата.",
         expTitle: "Трудов стаж",
         e1Title: "Разработчик на Софтуер",         e1Period: "Февр. 2023 – Настояще",
         e2Title: "Специалист Информационна Сигурност", e2Period: "Юли 2022 – Февр. 2023",
         e3Title: "Специалист Непрекъснатост",       e3Period: "Ян. 2022 – Юли 2022",
         e4Title: "Junior Data Engineer",             e4Period: "Юли 2020 – Ян. 2022",
-        e1b: ["Real-Time BigQuery DWH с CDC — поточна обработка на всички бази данни на Еконт в петабайтов мащаб",
+        e1b: ["Real-Time BigQuery DWH с CDC - поточна обработка на всички бази данни на Еконт в петабайтов мащаб",
               "VisionAI: In-House платформа за трениране на YOLOv8, PTZ автоматизация, хибриден LPR, Deepstream на NVIDIA",
-              "Talk2SQL — чатбот преобразуващ естествен език в BigQuery SQL върху целия DWH в реално време",
-              "Капацитет (Линии, Зони, Офиси) — мониторинг на натоварването в логистичната мрежа в реално време",
+              "Talk2SQL - чатбот преобразуващ естествен език в BigQuery SQL върху целия DWH в реално време",
+              "Капацитет (Линии, Зони, Офиси) - мониторинг на натоварването в логистичната мрежа в реално време",
               "AI интеграции: анализ на фактури, рентабилност на логистиката, AI агенти за бизнес операции",
               "Миграция на PHP ETL; CDC архитектура; GCP инфраструктура (Cloud Build, Cloud Run, Kubernetes)",
               "Интеграции с външни системи включително custom функции за Interbase извличане на данни",
@@ -1188,19 +1267,19 @@ const OP_CONTENT = {
               "Съавтор на цялостна система за имейл сигурност (DKIM, SPF, PTR, черни списъци, anti-phishing)",
               "Вътрешни penetration тестове; проактивно идентифициране и подаване на уязвимости на Ай Ти Партньор",
               "Мониторинг на пробиви чрез SIEM и Splunk; доклади след инциденти",
-              "Продуктов собственик на AppDynamics APM & F5 WAF — управление на изисквания и вендори"],
-        e3b: ["Продуктов собственик на AppDynamics APM & F5 WAF — управление на изисквания, вендори и внедрявания",
+              "Продуктов собственик на AppDynamics APM & F5 WAF - управление на изисквания и вендори"],
+        e3b: ["Продуктов собственик на AppDynamics APM & F5 WAF - управление на изисквания, вендори и внедрявания",
               "Анализ на причините за системни откази чрез AppDynamics при критични инциденти",
               "Технически посредник между бизнеса, ИТ управлението и инженерния екип при критични събития"],
         e4b: ["ETL процеси от Core и вторични системи към DWH; автоматизирани управленски справки",
               "Табла и репорти с MySQL, MSSQL, SSIS, SSRS, PowerBI за управлението на Еконт",
               "Администриране на всички облачни среди на Еконт (множество доставчици) и GitHub организацията",
-              "Ранен участник в проекти F5 WAF и AppDynamics — основа за бъдещото продуктово управление"],
+              "Ранен участник в проекти F5 WAF и AppDynamics - основа за бъдещото продуктово управление"],
         eduTitle: "Образование",
-        edu1Deg: "ИТ Кариера — Национална програма", edu1Maj: "Backend разработчик · Учебна програма базирана на SoftUni",
-        edu1Note: "Отличен (5.50/6.00) · Награда МОН — отличник на випуска",
-        edu2Deg: "СУ Христо Ботев, Русе",              edu2Maj: "Технически профил — ИТ",
-        edu2Note: "Награда Джон Атанасов — най-добър технически ученик"
+        edu1Deg: "ИТ Кариера - Национална програма", edu1Maj: "Backend разработчик · Учебна програма базирана на SoftUni",
+        edu1Note: "Отличен (5.50/6.00) · Награда МОН - отличник на випуска",
+        edu2Deg: "СУ Христо Ботев, Русе",              edu2Maj: "Технически профил - ИТ",
+        edu2Note: "Награда Джон Атанасов - най-добър технически ученик"
     }
 };
 
@@ -1224,7 +1303,7 @@ function applyOPLang(lang) {
     set('op-lang1',        lang === 'bg' ? 'Български'     : 'Bulgarian');
     set('op-lang1-level',  lang === 'bg' ? 'Роден'         : 'Native');
     set('op-lang2',        lang === 'bg' ? 'Английски'     : 'English');
-    set('op-lang2-level',  lang === 'bg' ? 'Професионален' : 'Professional');
+    set('op-lang2-level',  lang === 'bg' ? 'C1' : 'C1');
     set('op-sk1', c.sk1); set('op-sk2', c.sk2); set('op-sk3', c.sk3);
     set('op-sk4', c.sk4); set('op-sk5', c.sk5);
     set('op-award1', c.award1); set('op-award2', c.award2);

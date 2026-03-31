@@ -95,9 +95,36 @@ const translations = {
                 },
                 {
                     period: "2016 – 2021",
-                    degree: "SU Hristo Botev, Ruse",
+                    degree: "Hristo Botev High School, Ruse",
                     major: "Technical Track - Information Technology",
                     note: "John Atanasov Award - best technical student at graduation (3rd overall by GPA)"
+                }
+            ],
+            certsTitle: "Certifications",
+            certs: [
+                {
+                    name: "Professional Data Engineer",
+                    issuer: "Google Cloud",
+                    desc: "Design, build, and operationalize data processing systems, pipelines, and ML-ready datasets on GCP.",
+                    url: "https://www.credly.com/badges/b7700dd5-9a0b-45b9-b768-ff3de6742d8f/public_url",
+                    img: "images/professional-data-engineer-certification.png",
+                    type: "professional"
+                },
+                {
+                    name: "Professional Machine Learning Engineer",
+                    issuer: "Google Cloud",
+                    desc: "Architect, train, and deploy ML models and MLOps pipelines using Vertex AI.",
+                    url: "https://www.credly.com/badges/0f6e8fbd-c744-4722-aec7-1845e0884a45/public_url",
+                    img: "images/professional-machine-learning-engineer-certificatio.png",
+                    type: "professional"
+                },
+                {
+                    name: "Professional Cloud Developer",
+                    issuer: "Google Cloud",
+                    desc: "Build scalable, secure, cloud-native apps using Google Cloud tools and APIs.",
+                    url: "https://www.credly.com/badges/a2590a10-3a72-4b32-a5f7-131abd3aa8bc/public_url",
+                    img: "images/professional-cloud-developer-certification.png",
+                    type: "professional"
                 }
             ],
             awardsTitle: "Awards & Recognition",
@@ -375,6 +402,33 @@ const translations = {
                     degree: "СУ Христо Ботев, Русе",
                     major: "Технически профил - Информационни технологии",
                     note: "Награда Джон Атанасов - най-добър технически ученик при завършване (3-ти по успех)"
+                }
+            ],
+            certsTitle: "Сертификати",
+            certs: [
+                {
+                    name: "Professional Data Engineer",
+                    issuer: "Google Cloud",
+                    desc: "Проектиране, изграждане и управление на data pipelines, хранилища и ML-готови набори от данни в GCP.",
+                    url: "https://www.credly.com/badges/b7700dd5-9a0b-45b9-b768-ff3de6742d8f/public_url",
+                    img: "images/professional-data-engineer-certification.png",
+                    type: "professional"
+                },
+                {
+                    name: "Professional Machine Learning Engineer",
+                    issuer: "Google Cloud",
+                    desc: "Архитектиране, обучение и деплой на ML модели и MLOps pipeline-и с Vertex AI.",
+                    url: "https://www.credly.com/badges/0f6e8fbd-c744-4722-aec7-1845e0884a45/public_url",
+                    img: "images/professional-machine-learning-engineer-certificatio.png",
+                    type: "professional"
+                },
+                {
+                    name: "Professional Cloud Developer",
+                    issuer: "Google Cloud",
+                    desc: "Изграждане на мащабируеми, сигурни, cloud-native приложения с инструментите на Google Cloud.",
+                    url: "https://www.credly.com/badges/a2590a10-3a72-4b32-a5f7-131abd3aa8bc/public_url",
+                    img: "images/professional-cloud-developer-certification.png",
+                    type: "professional"
                 }
             ],
             awardsTitle: "Награди и отличия",

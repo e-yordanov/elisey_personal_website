@@ -121,6 +121,9 @@ class LanguageManager {
         const el = document.getElementById('about-content');
         if (!el) return;
 
+        // School awards = first two entries (Atanasov + MoE), skip the GCP bullet (redundant)
+        const schoolAwards = t.awards.slice(0, 2);
+
         el.innerHTML = `
             <div class="about-text" data-aos="fade-right">
                 <p>${t.p1}</p>
@@ -128,6 +131,26 @@ class LanguageManager {
                 <p>${t.p3}</p>
             </div>
             <div class="about-extras" data-aos="fade-left">
+                <div class="about-card about-certs-card">
+                    <div class="about-card-title">
+                        <i class="fas fa-certificate"></i> ${t.certsTitle}
+                        <a href="https://www.credly.com/users/elisey-yordanov/badges#credly" target="_blank" rel="noopener" class="credly-link">
+                            <i class="fas fa-external-link-alt"></i> Credly
+                        </a>
+                    </div>
+                    <div class="cert-cards-grid">
+                        ${t.certs.filter(c => c.type === 'professional').map(c => `
+                            <a href="${c.url}" target="_blank" rel="noopener" class="cert-card cert-card--professional">
+                                <img src="${c.img}" alt="${c.name}" class="cert-card-badge">
+                                <div class="cert-card-body">
+                                    <span class="cert-card-issuer">${c.issuer}</span>
+                                    <span class="cert-card-name">${c.name}</span>
+                                    <span class="cert-card-desc">${c.desc}</span>
+                                </div>
+                            </a>
+                        `).join('')}
+                    </div>
+                </div>
                 <div class="about-card">
                     <div class="about-card-title">
                         <i class="fas fa-graduation-cap"></i> ${t.educationTitle}
@@ -140,13 +163,8 @@ class LanguageManager {
                             <span class="edu-note">${e.note}</span>
                         </div>
                     `).join('')}
-                </div>
-                <div class="about-card">
-                    <div class="about-card-title">
-                        <i class="fas fa-trophy"></i> ${t.awardsTitle}
-                    </div>
-                    <div class="award-list">
-                        ${t.awards.map(a => `
+                    <div class="award-list edu-awards">
+                        ${schoolAwards.map(a => `
                             <div class="award-item">
                                 <i class="fas fa-star"></i>
                                 <span>${a}</span>
