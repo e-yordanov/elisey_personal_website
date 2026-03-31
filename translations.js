@@ -1,5 +1,5 @@
 /**
- * Elisey Yordanov — Personal Portfolio
+ * Elisey Yordanov - Personal Portfolio
  * Translation Data: English & Bulgarian
  */
 
@@ -82,28 +82,28 @@ const translations = {
         about: {
             sectionTitle: "About Me",
             sectionSubtitle: "A bit about who I am and what drives me",
-            p1: "I'm a 23-year-old Data Engineer and Software Developer from Ruse, Bulgaria. At 17, I started my IT career at Econt Express — Bulgaria's largest courier company — where I progressed from intern to Information Security Specialist in just two years.",
-            p2: "In 2023, I joined IT Partner Ltd — the company that built and maintains Econt's entire technology ecosystem. There I work on some of Bulgaria's most complex data engineering, AI/ML, and infrastructure projects at scale.",
+            p1: "I'm a 23-year-old Data Engineer and Software Developer from Ruse, Bulgaria. At 17, I started my IT career at Econt Express - Bulgaria's largest courier company - where I progressed from intern to Information Security Specialist in just two years.",
+            p2: "In 2023, I joined IT Partner Ltd - the company that built and maintains Econt's entire technology ecosystem. There I work on some of Bulgaria's most complex data engineering, AI/ML, and infrastructure projects at scale.",
             p3: "I'm passionate about building systems that solve real business problems. I hold three Google Cloud Professional certifications and I'm always looking for the next challenge.",
             educationTitle: "Education & Training",
             edu: [
                 {
                     period: "2019 – 2021",
-                    degree: "IT Career — National Program",
+                    degree: "IT Career - National Program",
                     major: "Backend Developer Pathway · SoftUni-based curriculum",
                     note: "Diploma with Honors (5.50/6.00) · Awarded by the Minister of Education as top graduate of the cohort"
                 },
                 {
                     period: "2016 – 2021",
                     degree: "SU Hristo Botev, Ruse",
-                    major: "Technical Track — Information Technology",
-                    note: "John Atanasov Award — best technical student at graduation (3rd overall by GPA)"
+                    major: "Technical Track - Information Technology",
+                    note: "John Atanasov Award - best technical student at graduation (3rd overall by GPA)"
                 }
             ],
             awardsTitle: "Awards & Recognition",
             awards: [
-                "John Atanasov Award — Best Technical Student (High School, 2021)",
-                "Ministry of Education Award — Top Graduate, IT Career National Program (2021)",
+                "John Atanasov Award - Best Technical Student (High School, 2021)",
+                "Ministry of Education Award - Top Graduate, IT Career National Program (2021)",
                 "3× Google Cloud Professional Certified (+ 2 Advanced Skill Badges)"
             ]
         },
@@ -159,11 +159,11 @@ const translations = {
                     company: "IT Partner Ltd",
                     location: "Shumen / Remote, Bulgaria",
                     current: true,
-                    description: "IT Partner built and maintains the entire Econt IT ecosystem — they are the real engineering core. Here I work on high-priority data engineering, AI/ML, and infrastructure projects. After the IT team migration I also helped write internal standards and lead data projects.",
+                    description: "IT Partner built and maintains the entire Econt IT ecosystem - they are the real engineering core. Here I work on high-priority data engineering, AI/ML, and infrastructure projects. After the IT team migration I also helped write internal standards and lead data projects.",
                     highlights: [
                         "Real-Time BigQuery DWH with CDC from all Econt databases",
-                        "VisionAI — in-house YOLOv8 platform, PTZ cameras, Deepstream on NVIDIA",
-                        "Talk2SQL — natural language to BigQuery chatbot",
+                        "VisionAI - in-house YOLOv8 platform, PTZ cameras, Deepstream on NVIDIA",
+                        "Talk2SQL - natural language to BigQuery chatbot",
                         "Capacity Analytics: Lines, Zones & Offices (load monitoring)",
                         "AI agents: invoice analysis, logistics profitability, business automation",
                         "PHP ETL framework migration; internal IT standards authorship"
@@ -222,21 +222,21 @@ const translations = {
             sectionSubtitle: "Highlights from my most impactful work",
             items: [
                 {
-                    title: "VisionAI — Computer Vision Platform",
+                    title: "VisionAI - Computer Vision Platform",
                     description: "Complete end-to-end platform for real-time truck monitoring at logistics hubs. Built an in-house ML training platform (YOLOv8 + dataset management), automated PTZ camera control, hybrid local+cloud LPR, and Smart ID Tracking. Deployed on NVIDIA hardware via Deepstream.",
                     tags: ["YOLOv8", "Deepstream", "NVIDIA", "Python", "GCP", "PTZ Cameras"],
                     icon: "fas fa-eye",
                     gradient: "grad-purple"
                 },
                 {
-                    title: "Real-Time DWH — BigQuery + CDC",
+                    title: "Real-Time DWH - BigQuery + CDC",
                     description: "Petabyte-scale data warehouse on Google BigQuery with Change Data Capture streaming every database mutation in real-time. Full isolation from operational systems, configurable staleness, automated reporting. One of Econt's most critical analytics foundations.",
                     tags: ["BigQuery", "CDC", "Cloud SQL", "GCP", "SQL", "Data Architecture"],
                     icon: "fas fa-database",
                     gradient: "grad-indigo"
                 },
                 {
-                    title: "Talk2SQL — Natural Language Analytics",
+                    title: "Talk2SQL - Natural Language Analytics",
                     description: "AI chatbot running on top of the entire enterprise DWH in real-time. Converts natural language questions into optimized BigQuery SQL with contextual multi-turn dialogue. Dramatically reduces the need for dedicated reporting staff.",
                     tags: ["LLM", "BigQuery", "NLP", "Python", "GCP", "Vertex AI"],
                     icon: "fas fa-comments",
@@ -244,7 +244,7 @@ const translations = {
                 },
                 {
                     title: "Logistics Profitability System",
-                    description: "Built an analytics system calculating the profitability of individual segments across Econt's logistics network — which transport lines, zones, and offices generate positive returns. Extracts and transforms financial and operational data end-to-end, delivering management-level profitability reports directly to senior leadership.",
+                    description: "Built an analytics system calculating the profitability of individual segments across Econt's logistics network - which transport lines, zones, and offices generate positive returns. Extracts and transforms financial and operational data end-to-end, delivering management-level profitability reports directly to senior leadership.",
                     tags: ["BigQuery", "Python", "ETL", "SQL", "PowerBI", "Data Engineering"],
                     icon: "fas fa-chart-line",
                     gradient: "grad-green"
@@ -316,7 +316,7 @@ const translations = {
         contact: {
             sectionTitle: "Get In Touch",
             sectionSubtitle: "Open to new opportunities and collaborations",
-            description: "Whether you have a project idea, want to talk data engineering or AI, or simply want to connect — feel free to reach out. I'm always happy to discuss technology.",
+            description: "Whether you have a project idea, want to talk data engineering or AI, or simply want to connect - feel free to reach out. I'm always happy to discuss technology.",
             emailLabel: "Email me",
             linkedinLabel: "Connect on LinkedIn",
             copySuccess: "Copied!",
@@ -359,28 +359,28 @@ const translations = {
         about: {
             sectionTitle: "За мен",
             sectionSubtitle: "Малко за това кой съм и какво ме вдъхновява",
-            p1: "Аз съм 23-годишен Data Engineer и Разработчик от Русе, България. На 17 години започнах IT кариерата си в Еконт Експрес — най-голямата куриерска компания в България — където за две години се издигнах от стажант до Специалист информационна сигурност.",
-            p2: "През 2023 се присъединих към Ай Ти Партньор ЕООД — компанията изградила и поддържаща цялата технологична екосистема на Еконт. Там работя по едни от най-сложните data engineering, AI/ML и инфраструктурни проекти в България.",
+            p1: "Аз съм 23-годишен Data Engineer и Разработчик от Русе, България. На 17 години започнах IT кариерата си в Еконт Експрес - най-голямата куриерска компания в България - където за две години се издигнах от стажант до Специалист информационна сигурност.",
+            p2: "През 2023 се присъединих към Ай Ти Партньор ЕООД - компанията изградила и поддържаща цялата технологична екосистема на Еконт. Там работя по едни от най-сложните data engineering, AI/ML и инфраструктурни проекти в България.",
             p3: "Страстен съм към изграждането на системи, решаващи реални бизнес проблеми. Притежавам три Google Cloud Professional сертификата и непрестанно търся следващото предизвикателство.",
             educationTitle: "Образование",
             edu: [
                 {
                     period: "2019 – 2021",
-                    degree: "ИТ Кариера — Национална програма",
+                    degree: "ИТ Кариера - Национална програма",
                     major: "Пътека Backend разработчик · Учебна програма базирана на SoftUni",
                     note: "Диплома с отличен (5.50/6.00) · Награден от министъра на образованието като отличник на випуска"
                 },
                 {
                     period: "2016 – 2021",
                     degree: "СУ Христо Ботев, Русе",
-                    major: "Технически профил — Информационни технологии",
-                    note: "Награда Джон Атанасов — най-добър технически ученик при завършване (3-ти по успех)"
+                    major: "Технически профил - Информационни технологии",
+                    note: "Награда Джон Атанасов - най-добър технически ученик при завършване (3-ти по успех)"
                 }
             ],
             awardsTitle: "Награди и отличия",
             awards: [
-                "Награда Джон Атанасов — Най-добър технически ученик (2021)",
-                "Награда от МОН — Отличник на програма ИТ Кариера (2021)",
+                "Награда Джон Атанасов - Най-добър технически ученик (2021)",
+                "Награда от МОН - Отличник на програма ИТ Кариера (2021)",
                 "3× Google Cloud Professional сертифициран (+ 2 Advanced Skill Badge)"
             ]
         },
@@ -436,11 +436,11 @@ const translations = {
                     company: "Ай Ти Партньор ЕООД",
                     location: "Шумен / Remote, България",
                     current: true,
-                    description: "Ай Ти Партньор изгради и поддържа цялата ИТ екосистема на Еконт — те са истинското инженерно ядро. Работя по приоритетни data engineering, AI/ML и инфраструктурни проекти. След миграцията на ИТ екипа помогнах и с написването на вътрешни стандарти.",
+                    description: "Ай Ти Партньор изгради и поддържа цялата ИТ екосистема на Еконт - те са истинското инженерно ядро. Работя по приоритетни data engineering, AI/ML и инфраструктурни проекти. След миграцията на ИТ екипа помогнах и с написването на вътрешни стандарти.",
                     highlights: [
                         "Real-Time BigQuery DWH с CDC от всички бази данни на Еконт",
-                        "VisionAI — In-House YOLOv8 платформа, PTZ камери, Deepstream на NVIDIA",
-                        "Talk2SQL — естествен език към BigQuery чатбот",
+                        "VisionAI - In-House YOLOv8 платформа, PTZ камери, Deepstream на NVIDIA",
+                        "Talk2SQL - естествен език към BigQuery чатбот",
                         "Капацитет: Линии, Зони & Офиси (мониторинг на натоварването)",
                         "AI агенти: анализ на фактури, рентабилност, автоматизация",
                         "Миграция към PHP ETL; написване на вътрешни ИТ стандарти"
@@ -499,21 +499,21 @@ const translations = {
             sectionSubtitle: "Избрани от най-значимата ми работа",
             items: [
                 {
-                    title: "VisionAI — Платформа за Computer Vision",
+                    title: "VisionAI - Платформа за Computer Vision",
                     description: "Цялостна end-to-end платформа за мониторинг на камиони в логистични хъбове в реално време. Изградих In-House платформа за трениране на YOLOv8 модели с управление на датасети, автоматизация на PTZ камери, хибриден локален+cloud LPR и Smart ID Tracking. Изпълнява се на NVIDIA хардуер чрез Deepstream.",
                     tags: ["YOLOv8", "Deepstream", "NVIDIA", "Python", "GCP", "PTZ камери"],
                     icon: "fas fa-eye",
                     gradient: "grad-purple"
                 },
                 {
-                    title: "Real-Time DWH — BigQuery + CDC",
+                    title: "Real-Time DWH - BigQuery + CDC",
                     description: "Data warehouse на петабайтов мащаб в Google BigQuery с Change Data Capture, предаващ всяка промяна в базата данни в реално време. Пълна изолация от оперативните системи, конфигурируем staleness, автоматизиран репортинг. Едната от най-критичните аналитични основи на Еконт.",
                     tags: ["BigQuery", "CDC", "Cloud SQL", "GCP", "SQL", "Архитектура"],
                     icon: "fas fa-database",
                     gradient: "grad-indigo"
                 },
                 {
-                    title: "Talk2SQL — Анализи с естествен език",
+                    title: "Talk2SQL - Анализи с естествен език",
                     description: "AI чатбот, работещ върху целия DWH в реално време. Преобразува въпроси на естествен език в оптимизирани BigQuery SQL заявки с многоходов диалог. Значително намалява нуждата от специализиран персонал за справки.",
                     tags: ["LLM", "BigQuery", "NLP", "Python", "GCP", "Vertex AI"],
                     icon: "fas fa-comments",
@@ -521,7 +521,7 @@ const translations = {
                 },
                 {
                     title: "Система за рентабилност на логистиката",
-                    description: "Аналитична система изчисляваща рентабилността на отделните сегменти в логистичната мрежа на Еконт — кои транспортни линии, зони и офиси генерират положителна доходност. Извлича и трансформира финансови и оперативни данни от край до край, предоставяйки management-ниво репорти директно на висшето ръководство.",
+                    description: "Аналитична система изчисляваща рентабилността на отделните сегменти в логистичната мрежа на Еконт - кои транспортни линии, зони и офиси генерират положителна доходност. Извлича и трансформира финансови и оперативни данни от край до край, предоставяйки management-ниво репорти директно на висшето ръководство.",
                     tags: ["BigQuery", "Python", "ETL", "SQL", "PowerBI", "Data Engineering"],
                     icon: "fas fa-chart-line",
                     gradient: "grad-green"
@@ -593,7 +593,7 @@ const translations = {
         contact: {
             sectionTitle: "Свържете се с мен",
             sectionSubtitle: "Отворен за нови възможности и сътрудничество",
-            description: "Независимо дали имате идея за проект, искате да обсъдим data engineering или AI, или просто да се свържем — не се колебайте. Винаги съм готов да говоря за технологии.",
+            description: "Независимо дали имате идея за проект, искате да обсъдим data engineering или AI, или просто да се свържем - не се колебайте. Винаги съм готов да говоря за технологии.",
             emailLabel: "Пишете ми",
             linkedinLabel: "LinkedIn профил",
             copySuccess: "Копирано!",
