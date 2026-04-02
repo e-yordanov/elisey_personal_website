@@ -356,12 +356,7 @@ class LanguageManager {
                     <i class="fab fa-linkedin"></i> ${t.linkedinLabel}
                 </a>
             </div>
-            <p class="contact-or">${t.orText}</p>
-            <div class="contact-socials">
-                <a href="https://github.com/e-yordanov" target="_blank" rel="noopener" class="social-link" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
+            
         `;
     }
 
