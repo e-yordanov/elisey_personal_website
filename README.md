@@ -9,7 +9,8 @@ Built as a static site deployable to **GitHub Pages** with a custom domain via *
 
 | URL                   | Notes                          |
 |-----------------------|-------------------------------|
-| `https://e-yordanov.github.io/elisey_personal_website/index.html` | GitHub Pages default URL |
+| `https://elisey.dev` | Primary custom domain |
+| `https://e-yordanov.github.io/elisey_personal_website/` | GitHub Pages default URL |
 
 ---
 
@@ -264,6 +265,7 @@ Ruse, Bulgaria
 - Phone: [0888 575 501](tel:+359888575501)
 - LinkedIn: [linkedin.com/in/elisey-yordanov-19625a1a0](https://www.linkedin.com/in/elisey-yordanov-19625a1a0)
 - GitHub: [github.com/e-yordanov](https://github.com/e-yordanov)
+- Website: [elisey.dev](https://elisey.dev)
 
 ---
 
