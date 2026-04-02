@@ -83,7 +83,7 @@ const translations = {
             sectionTitle: "About Me",
             sectionSubtitle: "A bit about who I am and what drives me",
             p1: "I'm a 23-year-old Data Engineer and Software Developer from Ruse, Bulgaria. At 17, I started my IT career at Econt Express - Bulgaria's largest courier company - where I grew from an intern to an Information Security Specialist in just two years, owning enterprise monitoring products and conducting penetration tests along the way.",
-            p2: "In 2023, I joined IT Partner Ltd - the company that built and maintains Econt's entire technology ecosystem. I work on some of Bulgaria's most complex data and AI projects: a petabyte-scale real-time data warehouse on BigQuery with CDC, VisionAI (an in-house computer vision platform for truck monitoring using YOLOv8 and Deepstream on NVIDIA GPUs), Talk2SQL (a natural language to SQL chatbot over the live enterprise DWH), and a suite of logistics capacity analytics systems used daily by management.",
+            p2: "In 2023, I joined IT Partner Ltd - the company that built and maintains Econt's entire technology ecosystem. I work on some of Bulgaria's most complex data and AI projects: a terabyte-scale real-time data warehouse on BigQuery with CDC, VisionAI (an in-house computer vision platform for truck monitoring using YOLOv8 and Deepstream on NVIDIA GPUs), Talk2SQL (a natural language to SQL chatbot over the live enterprise DWH), and a suite of logistics capacity analytics systems used daily by management.",
             p3: "I hold three Google Cloud Professional certifications - Data Engineer, ML Engineer, and Cloud Developer - and I regularly share what I learn by speaking at tech conferences. I've given talks on AI in Software Development, Vector Search & RAG, and Generative AI Agents at events like Ruse Conf, Plovdiv Conf, and BEST.",
             p4: "Outside of work, I co-host Logos Circle Ruse - a community of curious minds exploring ideas across technology, philosophy, and society. I support student competitions by participating as a mentor and jury member, and I'm involved in various volunteering initiatives in my hometown.",
             educationTitle: "Education & Training",
@@ -258,7 +258,7 @@ const translations = {
                 },
                 {
                     title: "Real-Time DWH - BigQuery + CDC",
-                    description: "Petabyte-scale data warehouse on Google BigQuery with Change Data Capture streaming every database mutation in real-time. Full isolation from operational systems, configurable staleness, automated reporting. One of Econt's most critical analytics foundations.",
+                    description: "Terabyte-scale data warehouse on Google BigQuery with Change Data Capture streaming every database mutation in real-time. Full isolation from operational systems, configurable staleness, automated reporting. One of Econt's most critical analytics foundations.",
                     tags: ["BigQuery", "CDC", "Cloud SQL", "GCP", "SQL", "Data Architecture"],
                     icon: "fas fa-database",
                     gradient: "grad-indigo"
