@@ -212,7 +212,7 @@ const translations = {
                         "Security incident reports and post-mortems",
                         "Continued AppDynamics & F5 WAF product ownership"
                     ],
-                    tags: ["F5 WAF", "AppDynamics", "Splunk", "SIEM", "Penetration Testing", "DDoS"]
+                    tags: ["F5 WAF", "AppDynamics", "Splunk", "SIEM", "Penetration Testing", "DDoS Mitigation"]
                 },
                 {
                     period: "Jan 2022 – Jul 2022",
