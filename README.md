@@ -40,6 +40,9 @@ Built as a static site deployable to **GitHub Pages** with a custom domain via *
 elisey_personal_website/
 ├── index.html          ← Main portfolio page
 ├── cv.html             ← CV / résumé page (printable)
+├── robots.txt          ← Search engine crawler rules
+├── sitemap.xml         ← URL list for Google/Bing
+├── llms.txt / llm.txt  ← LLM-readable site summary
 ├── styles.css          ← Global styles (variables, layout, all sections)
 ├── script.js           ← Main JavaScript (theme, language, particles, animations)
 ├── translations.js     ← All text content in English & Bulgarian
@@ -187,6 +190,26 @@ In **Settings → Pages → Custom domain**, enter `yourdomain.com` and enable *
 #### d) Cloudflare SSL/TLS
 
 Set **SSL/TLS → Overview** to **Full (strict)** to avoid redirect loops.
+
+#### e) SEO: canonical domain & redirects
+
+The canonical URL is **`https://elisey.dev`** (apex, no `www`). The repo includes:
+
+| File | Purpose |
+|---|---|
+| `robots.txt` | Crawler rules + sitemap link |
+| `sitemap.xml` | Indexable pages for Google |
+| `llms.txt` / `llm.txt` | Machine-readable site summary for LLMs |
+| `<link rel="canonical">` | On every HTML page |
+
+In **Cloudflare → Rules → Redirect Rules**, add (order matters):
+
+1. **HTTP → HTTPS** — `http://*elisey.dev/*` → `https://elisey.dev/${path}` (301)
+2. **www → apex** — `https://www.elisey.dev/*` → `https://elisey.dev/${path}` (301)
+
+In **GitHub → Settings → Pages → Custom domain**, set `elisey.dev` (not `www`) and enable **Enforce HTTPS**.
+
+After deploy, use [Google Search Console](https://search.google.com/search-console) → **URL Inspection** → request indexing for `https://elisey.dev/`. Submit `https://elisey.dev/sitemap.xml` under **Sitemaps**.
 
 ---
 

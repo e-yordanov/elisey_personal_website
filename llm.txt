@@ -1,0 +1,32 @@
+# Elisey Yordanov
+
+> Personal portfolio of Elisey Yordanov — Data Engineer and Software Developer from Ruse, Bulgaria. Builds data warehouses, AI/ML systems, and Google Cloud infrastructure. Three Google Cloud Professional certifications (Data Engineer, ML Engineer, Cloud Developer). Conference speaker on AI, RAG, and generative agents.
+
+Canonical site: https://elisey.dev/
+
+## About
+
+- [Home](https://elisey.dev/): Portfolio — about, skills, career timeline, projects, certifications, talks, contact
+- [CV (one page)](https://elisey.dev/cv-onepage.html): Printable resume
+- [CV (full)](https://elisey.dev/cv.html): Detailed resume page
+
+## Contact
+
+- Email: elisei.elisei4@gmail.com
+- LinkedIn: https://www.linkedin.com/in/elisey-yordanov-19625a1a0
+- GitHub: https://github.com/e-yordanov
+- Credly badges: https://www.credly.com/users/elisey-yordanov/badges
+
+## Expertise
+
+Data engineering, BigQuery, GCP, CDC pipelines, computer vision (YOLOv8), NLP/SQL chatbots, MLOps, Vertex AI, Python, cloud architecture, information security.
+
+## Talks
+
+- AI in Software Development — BEST 2025 (Shumen IT)
+- Vector Searches & RAG — Ruse Conf 2025
+- Generative AI Agents — Plovdiv Conf 2024
+
+## Optional
+
+- [AI-focused CV](https://elisey.dev/cv-ai.html): Resume variant emphasizing ML/AI roles (not listed in sitemap)
